@@ -50,32 +50,7 @@ public class BlenderBinControl : MonoBehaviour
                         GamePlay.blender_contents = 0;
                         tea3Cook.SetActive(false);
                     }
-
-                } else if (GamePlay.plate2Cup == "empty"){      // hot tea cup
-
-                    if (GamePlay.blender_contents == 1){
-                        Instantiate(tea1Plating, hotTeaSP.position, tea1Plating.transform.rotation); 
-                        GamePlay.plate2Cup = "tea";
-                        GamePlay.plate2Tea = 1;
-                        GamePlay.blender = "empty";
-                        GamePlay.blender_contents = 0;
-                        tea1Cook.SetActive(false);                        
-                    } else if (GamePlay.blender_contents == 2){
-                        Instantiate(tea2Plating, hotTeaSP.position, tea2Plating.transform.rotation); 
-                        GamePlay.plate2Cup = "tea";
-                        GamePlay.plate2Tea = 2;
-                        GamePlay.blender = "empty";
-                        GamePlay.blender_contents = 0;
-                        tea2Cook.SetActive(false);
-                    } else if (GamePlay.blender_contents == 3){
-                        Instantiate(tea3Plating, hotTeaSP.position, tea3Plating.transform.rotation); 
-                        GamePlay.plate2Cup = "tea";
-                        GamePlay.plate2Tea = 3;
-                        GamePlay.blender = "empty";
-                        GamePlay.blender_contents = 0;
-                        tea3Cook.SetActive(false);
-                    }
-                }                
+                }               
             }
 
         }        

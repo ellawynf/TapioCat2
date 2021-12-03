@@ -27,16 +27,6 @@ public class ToppingBinControl : MonoBehaviour
                 } else if (gameObject.CompareTag("3")){
                     GamePlay.plate1Topping = 3;
                 }
-            } else if (GamePlay.plate2Cup == "tea"){        // hot cup
-                Instantiate(toppingPlating, hotToppingSP.position, toppingPlating.transform.rotation); 
-                GamePlay.plate2Cup = "full";
-                if (gameObject.CompareTag("1")){
-                    GamePlay.plate2Topping = 1;
-                } else if (gameObject.CompareTag("2")){
-                    GamePlay.plate2Topping = 2;
-                } else if (gameObject.CompareTag("3")){
-                    GamePlay.plate2Topping = 3;
-                }      
             }
         }        
     }
