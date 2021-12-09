@@ -11,14 +11,23 @@ public class ToppingBinControl : MonoBehaviour
 
     public GameObject toppingPlating;
     
-    public Transform iceToppingSP;
+    public Transform toppingPlateSP;
+
+    public GameObject iceParentCup;
+    public GameObject hotParentCup;
+
     //public Transform hotToppingSP;
 
     // try to get this to work generically
     public bool PlaceTopping(){
         // topping must go on after tea for now
         if (GamePlay.plate1Cup == "tea"){
-            Instantiate(toppingPlating, iceToppingSP.position, toppingPlating.transform.rotation);
+            // determine which cup to instantiate as parent
+            if (iceParentCup.activeSelf){
+                Instantiate(toppingPlating, toppingPlateSP.position, toppingPlating.transform.rotation, iceParentCup.transform);
+            } else if (hotParentCup.activeSelf){
+                Instantiate(toppingPlating, toppingPlateSP.position, toppingPlating.transform.rotation, hotParentCup.transform);
+            }
             GamePlay.plate1Cup = "full";
             return true;
         } else {

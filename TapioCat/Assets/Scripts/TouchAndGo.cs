@@ -17,6 +17,11 @@ public class TouchAndGo : MonoBehaviour {
 
 	void Start () {
 		rb = GetComponent<Rigidbody2D> ();
+
+		// deactivate cup objects at start
+		foreach (Transform child in transform){
+			child.gameObject.SetActive(false);
+		}
 	}
 	
 	void Update () {

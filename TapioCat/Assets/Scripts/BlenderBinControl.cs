@@ -20,27 +20,51 @@ public class BlenderBinControl : MonoBehaviour
     public GameObject tea2Cook;
     public GameObject tea3Cook;
 
+    public GameObject iceParentCup;
+    public GameObject hotParentCup;
+
     public void Blender(){
         if (GamePlay.blender == "full"){
 
             if (GamePlay.plate1Cup == "empty"){     // tea must go in before topping
-                GamePlay.plate1Cup = "tea";
-                GamePlay.blender = "empty";
 
-                if (GamePlay.blender_contents == 1){
-                    Instantiate(tea1Plating, teaPlateSP.position, tea1Plating.transform.rotation); 
+                if (GamePlay.blender_contents == 1){        // tea1
+                    if (GamePlay.plate1Temp == 0){      // cold
+                        Instantiate(tea1Plating, teaPlateSP.position, tea1Plating.transform.rotation, iceParentCup.transform); 
+
+                    } else if (GamePlay.plate1Temp == 1){   // hot
+                        Instantiate(tea1Plating, teaPlateSP.position, tea1Plating.transform.rotation, hotParentCup.transform); 
+                    }
+
                     GamePlay.plate1Tea = 1;
                     tea1Cook.SetActive(false);
-                } else if (GamePlay.blender_contents == 2){
-                    Instantiate(tea2Plating, teaPlateSP.position, tea2Plating.transform.rotation); 
+
+                } else if (GamePlay.blender_contents == 2){     // tea2
+                    if (GamePlay.plate1Temp == 0){      // cold
+                        Instantiate(tea2Plating, teaPlateSP.position, tea2Plating.transform.rotation, iceParentCup.transform); 
+
+                    } else if (GamePlay.plate1Temp == 1){   // hot
+                        Instantiate(tea2Plating, teaPlateSP.position, tea2Plating.transform.rotation, hotParentCup.transform); 
+                    }
+
                     GamePlay.plate1Tea = 2;
                     tea2Cook.SetActive(false);
-                } else if (GamePlay.blender_contents == 3){
-                    Instantiate(tea3Plating, teaPlateSP.position, tea3Plating.transform.rotation); 
+
+                } else if (GamePlay.blender_contents == 3){     // tea3
+                    if (GamePlay.plate1Temp == 0){      // cold
+                        Instantiate(tea3Plating, teaPlateSP.position, tea3Plating.transform.rotation, iceParentCup.transform); 
+
+                    } else if (GamePlay.plate1Temp == 1){   // hot
+                        Instantiate(tea3Plating, teaPlateSP.position, tea3Plating.transform.rotation, hotParentCup.transform); 
+                    }
+
                     GamePlay.plate1Tea = 3;
                     tea3Cook.SetActive(false);
                 }
+
                 GamePlay.blender_contents = 0;
+                GamePlay.plate1Cup = "tea";
+                GamePlay.blender = "empty";                
             }              
         }
     }
