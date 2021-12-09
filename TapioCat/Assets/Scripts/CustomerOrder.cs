@@ -47,7 +47,26 @@ public class CustomerOrder : MonoBehaviour
         drinkOrdered = ice.ToString()+tea.ToString()+topping.ToString();
     }
 
-    void OnTriggerEnter2D(Collider2D other)
+    public void Deliver(){
+        if (GamePlay.pickup == true){ //if the player is "carrying something"
+            if (GamePlay.pickedDrink == drinkOrdered){ //if it's the thing we want
+                _audioSource.PlayOneShot(coins);
+                GamePlay.totalScore++;
+                GamePlay.pickup = false;
+                GamePlay.pickedDrink = "None";
+                atCounter = false;
+                temp[ice].SetActive(false);
+                teaTypes[tea-1].SetActive(false);
+                toppingTypes[topping-1].SetActive(false);
+                drinkOrdered = "";
+                customerSprite.SetActive(false);
+                // yeah, also gotta set the sprites to destroy, we can figure that out later
+                //other resets go here too, probably something with the serving area
+            }
+        } 
+    }
+
+    /*void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player")){
             print("hit player");
@@ -67,7 +86,7 @@ public class CustomerOrder : MonoBehaviour
                 }
             }
         }
-    }
+    }*/
 
 
     void Update(){

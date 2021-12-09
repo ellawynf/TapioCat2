@@ -12,9 +12,40 @@ public class ToppingBinControl : MonoBehaviour
     public GameObject toppingPlating;
     
     public Transform iceToppingSP;
-    public Transform hotToppingSP;
+    //public Transform hotToppingSP;
 
-    void OnTriggerEnter2D(Collider2D other)
+    // try to get this to work generically
+    public bool PlaceTopping(){
+        // topping must go on after tea for now
+        if (GamePlay.plate1Cup == "tea"){
+            Instantiate(toppingPlating, iceToppingSP.position, toppingPlating.transform.rotation);
+            GamePlay.plate1Cup = "full";
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    public void Boba(){
+        // topping must go on after tea for now
+        if (PlaceTopping()){
+            GamePlay.plate1Topping = 1;
+        }
+    }
+
+    public void Jelly(){
+        if (PlaceTopping()){
+            GamePlay.plate1Topping = 2;
+        }
+    }
+
+    public void Pudding(){
+        if (PlaceTopping()){
+            GamePlay.plate1Topping = 3;
+        }
+    }
+
+    /*void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player")){
             if (GamePlay.plate1Cup == "tea"){       // ice cup; topping must go on after tea for now
@@ -29,5 +60,5 @@ public class ToppingBinControl : MonoBehaviour
                 }
             }
         }        
-    }
+    }*/
 }

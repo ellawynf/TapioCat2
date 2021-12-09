@@ -24,7 +24,52 @@ public class BinControl : MonoBehaviour
         _audioSource = GetComponent<AudioSource>();
     }
 
-    void OnTriggerEnter2D(Collider2D other)
+    // try to get this to work generically
+    /*public void CookTea(){
+        if (GamePlay.blender == "empty"){
+            teaCook.SetActive(true);
+            _audioSource.PlayOneShot(teaSound);
+            GamePlay.blender = "cooking";            
+        }
+    }*/
+
+    public void Taro(){
+        if (GamePlay.blender == "empty"){
+            // put the tea in the blender
+            teaCook.SetActive(true);
+            _audioSource.PlayOneShot(teaSound);
+            GamePlay.blender = "cooking";
+
+            // keeping track of what tea is in there
+            GamePlay.blender_contents = 1;            
+        }
+    }
+
+    public void Matcha(){
+        if (GamePlay.blender == "empty"){
+            // put the tea in the blender
+            teaCook.SetActive(true);
+            _audioSource.PlayOneShot(teaSound);
+            GamePlay.blender = "cooking";
+
+            // keeping track of what tea is in there
+            GamePlay.blender_contents = 2;
+        }
+    }
+
+    public void Thai(){
+        if (GamePlay.blender == "empty"){
+            // put the tea in the blender
+            teaCook.SetActive(true);
+            _audioSource.PlayOneShot(teaSound);
+            GamePlay.blender = "cooking";
+
+            // keeping track of what tea is in there
+            GamePlay.blender_contents = 3;            
+        }
+    }
+
+    /*void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player")){
             if (GamePlay.blender == "empty"){
@@ -43,5 +88,5 @@ public class BinControl : MonoBehaviour
                 }
             }              
         }
-    }
+    }*/
 }

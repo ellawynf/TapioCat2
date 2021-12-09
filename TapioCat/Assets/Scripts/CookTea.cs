@@ -8,16 +8,21 @@ public class CookTea : MonoBehaviour
     Goes on each TeaCook object at blending station
     *************/
 
-    private float cookTime;
+    float cookTime;
     public int timeTilCooked = 6;
 
-    void Start() {
+    /*void Start() {
         cookTime = 0;    
+    }*/
+
+    private void OnEnable() {
+        cookTime = 0;
     }
     // Update is called once per frame
     void Update()
     {
         if (gameObject.activeSelf){
+            print(cookTime);
             cookTime += Time.deltaTime;
             if (cookTime > timeTilCooked){
                 // TODO: add animations? add burning (add another range)?
@@ -32,8 +37,6 @@ public class CookTea : MonoBehaviour
                     GamePlay.blender = "full";
                 }
             }           
-        } else {
-            cookTime = 0;
         }
     }
 }

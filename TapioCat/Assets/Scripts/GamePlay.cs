@@ -20,6 +20,8 @@ public class GamePlay : MonoBehaviour
     // options are "0", "1", "2", "3"
     public static int plate1Topping = 0;
     public static int plate1Tea = 0;
+    // options are 0,1 (0=cold, 1=hot)
+    public static int plate1Temp;
     public static int plate2Topping = 0;
     public static int plate2Tea = 0;
 
