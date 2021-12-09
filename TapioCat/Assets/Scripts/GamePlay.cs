@@ -37,5 +37,8 @@ public class GamePlay : MonoBehaviour
     //I'm putting this here for testing, but it prob should go higher
     //options are "0" to "3"
     public static int totalScore = 0;
-    //
+    
+    //Customer queue information
+    //how many are in the queue
+    public static int customerQueue = 0;
 }
