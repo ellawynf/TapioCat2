@@ -41,9 +41,10 @@ public class CustomerOrder : MonoBehaviour
         ice = (Random.Range(1,4)%2);
         tea = Random.Range(1,3);
         topping = Random.Range(1,3);
-        temp[ice].SetActive(true);
+        //I do not know why we don't need these lines of code, but getting rid of them solves the sprite problem
+        /*temp[ice].SetActive(true);
         teaTypes[tea-1].SetActive(true);
-        toppingTypes[topping-1].SetActive(true);
+        toppingTypes[topping-1].SetActive(true);*/
         drinkOrdered = ice.ToString()+tea.ToString()+topping.ToString();
     }
 
