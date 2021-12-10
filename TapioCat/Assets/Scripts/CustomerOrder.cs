@@ -49,7 +49,9 @@ public class CustomerOrder : MonoBehaviour
 
     public void Deliver(){
         if (GamePlay.pickup == true){ //if the player is "carrying something"
+            print("clicked");
             if (GamePlay.pickedDrink == drinkOrdered){ //if it's the thing we want
+                print("delivering");
                 _audioSource.PlayOneShot(coins);
                 GamePlay.totalScore++;
                 GamePlay.pickup = false;

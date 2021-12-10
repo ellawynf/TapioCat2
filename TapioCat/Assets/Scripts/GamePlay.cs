@@ -14,16 +14,17 @@ public class GamePlay : MonoBehaviour
     public static string tea3Cook = "empty";
 
     // plating station
+    // options are 0,1 (0=cold, 1=hot)
+    public static int plate1Temp;
     // options are "none", "empty", "tea", "full"
     public static string plate1Cup = "none";        // ice cup
     public static string plate2Cup = "none";        // hot cup
     // options are "0", "1", "2", "3"
     public static int plate1Topping = 0;
     public static int plate1Tea = 0;
-    // options are 0,1 (0=cold, 1=hot)
-    public static int plate1Temp;
     public static int plate2Topping = 0;
     public static int plate2Tea = 0;
+
 
     // blender station
     // options are "empty", "cooking", "full"
@@ -42,5 +43,5 @@ public class GamePlay : MonoBehaviour
     
     //Customer queue information
     //how many are in the queue
-    public static int customerQueue = 0;
+    //public static int customerQueue = 0;
 }

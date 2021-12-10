@@ -19,7 +19,7 @@ public class PickUpHot : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player")){
-            if (GamePlay.plate1Topping != 0){
+            if (GamePlay.plate1Topping != 0 && GamePlay.pickup != true){
                     GamePlay.pickup = true;
                     GamePlay.pickedDrink = "1"+GamePlay.plate1Tea+GamePlay.plate1Topping;
                     print(GamePlay.pickedDrink);

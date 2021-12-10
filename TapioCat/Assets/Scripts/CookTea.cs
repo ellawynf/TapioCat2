@@ -22,7 +22,7 @@ public class CookTea : MonoBehaviour
     void Update()
     {
         if (gameObject.activeSelf){
-            print(cookTime);
+            //print(cookTime);
             cookTime += Time.deltaTime;
             if (cookTime > timeTilCooked){
                 // TODO: add animations? add burning (add another range)?
