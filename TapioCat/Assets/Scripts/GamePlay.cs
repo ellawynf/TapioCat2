@@ -5,9 +5,9 @@ using UnityEngine;
 public class GamePlay : MonoBehaviour
 {
     // options are "empty", "cooking", "full"
-    //public static string topping1Cook = "empty";
-    //public static string topping2Cook = "empty";
-    //public static string topping3Cook = "empty";
+    public static string topping1Cook = "empty";
+    public static string topping2Cook = "empty";
+    public static string topping3Cook = "empty";
 
     //public static string tea1Cook = "empty";
     //public static string tea2Cook = "empty";
