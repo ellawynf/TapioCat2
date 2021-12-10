@@ -43,5 +43,7 @@ public class GamePlay : MonoBehaviour
     
     //Customer queue information
     //how many are in the queue
-    //public static int customerQueue = 0;
+    public static int customerQueue = 0;
+    //total customers we've had this level
+    public static int customerTotal = 0;
 }

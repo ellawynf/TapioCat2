@@ -25,11 +25,11 @@ public class CustomerOrder : MonoBehaviour
         _audioSource = GetComponent<AudioSource>();
 
         //set all cup variables to no
+        //temp[0].SetActive(false);
+        //temp[1].SetActive(false);
         foreach (GameObject temps in temp){
             temps.SetActive(false);
         }
-        //temp[0].SetActive(false);
-        //temp[1].SetActive(false);
         foreach (GameObject teas in teaTypes){
             teas.SetActive(false);
         }
@@ -94,7 +94,7 @@ public class CustomerOrder : MonoBehaviour
     void Update(){
         //check if there's an "empty" space and if there's a customer in the queue
         //if yes then set to active
-        if (atCounter == false && customerQueue > 0){//GamePlay.customerQueue > 0){
+        if (atCounter == false && GamePlay.customerQueue > 0){
             atCounter = true;
             customerSprite.SetActive(true);
             ice = (Random.Range(1,4)%2);

@@ -33,8 +33,7 @@ public class BinControl : MonoBehaviour
         }
     }*/
 
-
-    public void Thai(){
+    public void Taro(){
         if (GamePlay.blender == "empty"){
             // put the tea in the blender
             teaCook.SetActive(true);
@@ -45,6 +44,7 @@ public class BinControl : MonoBehaviour
             GamePlay.blender_contents = 1;            
         }
     }
+
     public void Matcha(){
         if (GamePlay.blender == "empty"){
             // put the tea in the blender
@@ -57,7 +57,7 @@ public class BinControl : MonoBehaviour
         }
     }
 
-    public void Taro(){
+    public void Thai(){
         if (GamePlay.blender == "empty"){
             // put the tea in the blender
             teaCook.SetActive(true);

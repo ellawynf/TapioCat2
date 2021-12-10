@@ -13,6 +13,9 @@ public class TouchAndGo : MonoBehaviour {
 	Vector3 touchPosition, whereToMove;
 	bool isMoving = false;
 
+	//adding customers to queue
+	public bool waiting = false;
+
 	float previousDistanceToTouchPos, currentDistanceToTouchPos;
 
 	void Start () {
@@ -25,6 +28,8 @@ public class TouchAndGo : MonoBehaviour {
 	}
 	
 	void Update () {
+
+		StartCoroutine(addCustomer(60));
 
 		if (isMoving)
 			currentDistanceToTouchPos = (touchPosition - transform.position).magnitude;
@@ -50,5 +55,15 @@ public class TouchAndGo : MonoBehaviour {
 
 		if (isMoving)
 			previousDistanceToTouchPos = (touchPosition - transform.position).magnitude;
+	}
+
+
+	IEnumerator addCustomer(float time) {
+		if (waiting == true || GamePlay.customerTotal >= 6){
+			yield break;
+		}
+		GamePlay.customerQueue++;
+		GamePlay.customerTotal++;
+		yield return new WaitForSeconds(time);
 	}
 }
