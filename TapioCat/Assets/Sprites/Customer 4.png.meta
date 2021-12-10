@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 8a365978c135044b0a679ef5403699aa
+guid: 9bab4f5acf0f4444fa63e3220addeff5
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 12
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -116,13 +116,181 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: TapioCat - Player_0
+      name: Customer 4_0
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 137
+        width: 22
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de3f169849f4b413492b308e0332f8d4
+      internalID: -904494279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Customer 4_1
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 137
+        width: 20
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a43ec1baeabc24f5eb116f0a67e6aa95
+      internalID: -131128660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Customer 4_2
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 137
+        width: 20
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4232af4ade5404c059c03dace147b93f
+      internalID: -748787922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Customer 4_3
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 137
+        width: 22
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 828c113bcf00d42108d5ccebb67f5f22
+      internalID: 1843897855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Customer 4_4
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 137
+        width: 21
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f948e0be92fcc4fcca3c67d9ba102cd4
+      internalID: 471888877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Customer 4_5
+      rect:
+        serializedVersion: 2
+        x: 345
+        y: 137
+        width: 23
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86e05b3d52a5e4077a9540dd1439c102
+      internalID: 1302138775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Customer 4_6
+      rect:
+        serializedVersion: 2
+        x: 409
+        y: 137
+        width: 22
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0bcc6c25914894cc28f3cdbf15cc0ce6
+      internalID: -894775494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Customer 4_7
+      rect:
+        serializedVersion: 2
+        x: 474
+        y: 137
+        width: 21
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe1c65566fa5249678a1a324d3d1386e
+      internalID: -802736541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Customer 4_8
       rect:
         serializedVersion: 2
         x: 25
         y: 73
-        width: 22
-        height: 35
+        width: 23
+        height: 33
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -130,20 +298,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9ea85cd3ad1ca46f881ad6f3146dd5dd
-      internalID: 615934990
+      spriteID: ed51294e487d8494ca9851e2c0e3d8b8
+      internalID: -796890126
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TapioCat - Player_1
+      name: Customer 4_9
       rect:
         serializedVersion: 2
-        x: 90
+        x: 92
         y: 73
-        width: 20
-        height: 35
+        width: 17
+        height: 29
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -151,20 +319,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e11b1b47ed3ed41fa9e5919f6aa71ca7
-      internalID: 1638108892
+      spriteID: c5d7429ed77004ab98aea858fe1a0381
+      internalID: 1830222443
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TapioCat - Player_2
+      name: Customer 4_10
       rect:
         serializedVersion: 2
-        x: 153
-        y: 73
-        width: 20
-        height: 35
+        x: 156
+        y: 75
+        width: 18
+        height: 27
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -172,41 +340,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d8bd685ec065344a3b2fc7d33e7d8253
-      internalID: -613181239
+      spriteID: cbb452ecc48eb4ca8b019272891bd71d
+      internalID: 591894656
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TapioCat - Player_3
+      name: Customer 4_11
       rect:
         serializedVersion: 2
         x: 220
         y: 73
-        width: 17
-        height: 35
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7d835ab62ee5045099831917743fb63e
-      internalID: -57643077
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: TapioCat - Player_4
-      rect:
-        serializedVersion: 2
-        x: 284
-        y: 75
         width: 18
-        height: 33
+        height: 29
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -214,41 +361,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 362cabcd997814fdca115b12546c804d
-      internalID: -466309529
+      spriteID: ff8e22eef40b5495fbecdccbf111ab58
+      internalID: 22390408
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TapioCat - Player_5
+      name: Customer 4_12
       rect:
         serializedVersion: 2
-        x: 348
-        y: 73
-        width: 18
-        height: 35
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5daec924f803947cfbd5da4e9f2c583c
-      internalID: 323421660
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: TapioCat - Player_6
-      rect:
-        serializedVersion: 2
-        x: 411
+        x: 283
         y: 73
         width: 21
-        height: 35
+        height: 29
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -256,20 +382,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8da2c96f279814cc79b669547377790c
-      internalID: 1533034534
+      spriteID: c02cdc8e575a74f8a955d7dac53d5b74
+      internalID: -409156769
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TapioCat - Player_7
+      name: Customer 4_13
       rect:
         serializedVersion: 2
-        x: 474
+        x: 346
         y: 73
         width: 24
-        height: 35
+        height: 29
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -277,20 +403,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 865d6040d1e634659b57a5a3912998ed
-      internalID: 1987993937
+      spriteID: a311c3cdcb5144d47b91a5e2c302c234
+      internalID: 94925553
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TapioCat - Player_8
+      name: Customer 4_14
       rect:
         serializedVersion: 2
-        x: 28
-        y: 9
+        x: 412
+        y: 73
         width: 18
-        height: 35
+        height: 29
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -298,40 +424,61 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f012b8930bae44880970adc8030b73d4
-      internalID: 1853559595
+      spriteID: 73331e2a98bb5497098d99c52d496eb9
+      internalID: 1094344976
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TapioCat - Player_9
+      name: Customer 4_15
+      rect:
+        serializedVersion: 2
+        x: 472
+        y: 73
+        width: 24
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b19f631d469fe41458f139287449f7da
+      internalID: 1681457269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Customer 4_19
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 11
+        width: 24
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c6cdd9a82cff40028af71f38d0ea851
+      internalID: 1790370626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Customer 4_29
       rect:
         serializedVersion: 2
         x: 88
         y: 9
-        width: 22
-        height: 35
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 590adf695146b4524bc629c2e4726815
-      internalID: 390042830
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: TapioCat - Player_10
-      rect:
-        serializedVersion: 2
-        x: 152
-        y: 11
-        width: 22
+        width: 24
         height: 33
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -340,20 +487,41 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9135405039b074c4ab6c4328b2e9661a
-      internalID: 315284671
+      spriteID: 124544536f4af4198aacfbc65df3dfe0
+      internalID: -953111906
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TapioCat - Player_11
+      name: Customer 4_30
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 9
+        width: 24
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 715d8c580958344d392706e7b5c7fec5
+      internalID: -168578137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Customer 4_31
       rect:
         serializedVersion: 2
         x: 216
         y: 9
-        width: 22
-        height: 35
+        width: 24
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -361,41 +529,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 35805f157a72e4e2ea355fe9a65edeba
-      internalID: -1546351092
+      spriteID: a54f07384f81a464791b9c312e084294
+      internalID: -1864313337
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TapioCat - Player_12
+      name: Customer 4_32
       rect:
         serializedVersion: 2
         x: 280
         y: 9
-        width: 23
-        height: 35
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0ed5a977a09c5489db520639bb29416b
-      internalID: -1475124376
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: TapioCat - Player_13
-      rect:
-        serializedVersion: 2
-        x: 344
-        y: 9
         width: 24
-        height: 35
+        height: 33
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -403,29 +550,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 41d5c91d5c11043b6980ff0ef99bcdc2
-      internalID: -1854725632
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: TapioCat - Player_14
-      rect:
-        serializedVersion: 2
-        x: 408
-        y: 9
-        width: 22
-        height: 35
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5a718ed3aadc14f34bb40955c3414076
-      internalID: -112882429
+      spriteID: b14cb50a5315d4f1db1a9930430a8b25
+      internalID: 1719037543
       vertices: []
       indices: 
       edges: []
@@ -441,21 +567,39 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      TapioCat - Player_5: 323421660
-      TapioCat - Player_11: -1546351092
-      TapioCat - Player_10: 315284671
-      TapioCat - Player_8: 1853559595
-      TapioCat - Player_1: 1638108892
-      TapioCat - Player_12: -1475124376
-      TapioCat - Player_6: 1533034534
-      TapioCat - Player_0: 615934990
-      TapioCat - Player_9: 390042830
-      TapioCat - Player_7: 1987993937
-      TapioCat - Player_13: -1854725632
-      TapioCat - Player_14: -112882429
-      TapioCat - Player_4: -466309529
-      TapioCat - Player_3: -57643077
-      TapioCat - Player_2: -613181239
+      Customer 4_8: -796890126
+      Customer 4_26: 2129283593
+      Customer 4_6: -894775494
+      Customer 4_3: 1843897855
+      Customer 4_25: -912591164
+      Customer 4_17: 1057775672
+      Customer 4_22: 1243480453
+      Customer 4_5: 1302138775
+      Customer 4_23: -2126065903
+      Customer 4_9: 1830222443
+      Customer 4_11: 22390408
+      Customer 4_28: -2141459379
+      Customer 4_4: 471888877
+      Customer 4_19: 1790370626
+      Customer 4_27: 262977744
+      Customer 4_20: -287623517
+      Customer 4_21: -1463897284
+      Customer 4_7: -802736541
+      Customer 4_30: -168578137
+      Customer 4_29: -953111906
+      Customer 4_14: 1094344976
+      Customer 4_13: 94925553
+      Customer 4_15: 1681457269
+      Customer 4_16: 835999527
+      Customer 4_12: -409156769
+      Customer 4_10: 591894656
+      Customer 4_1: -131128660
+      Customer 4_0: -904494279
+      Customer 4_32: 1719037543
+      Customer 4_31: -1864313337
+      Customer 4_2: -748787922
+      Customer 4_24: -255785077
+      Customer 4_18: -306284285
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
