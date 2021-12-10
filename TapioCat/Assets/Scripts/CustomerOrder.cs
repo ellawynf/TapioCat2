@@ -61,7 +61,7 @@ public class CustomerOrder : MonoBehaviour
                 temp[ice].SetActive(false);
                 teaTypes[tea-1].SetActive(false);
                 toppingTypes[topping-1].SetActive(false);
-                drinkOrdered = "";
+                drinkOrdered = "Nonce";
                 customerSprite.SetActive(false);
                 // yeah, also gotta set the sprites to destroy, we can figure that out later
                 //other resets go here too, probably something with the serving area
@@ -101,9 +101,9 @@ public class CustomerOrder : MonoBehaviour
             ice = (Random.Range(1,4)%2);
             tea = Random.Range(1,3);
             topping = Random.Range(1,3);
-            temp[ice].SetActive(true);
+            /*temp[ice].SetActive(true);
             teaTypes[tea-1].SetActive(true);
-            toppingTypes[topping-1].SetActive(true);
+            toppingTypes[topping-1].SetActive(true);*/
             drinkOrdered = ice.ToString()+tea.ToString()+topping.ToString();
         }
     }

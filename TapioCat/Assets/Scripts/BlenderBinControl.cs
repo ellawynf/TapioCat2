@@ -12,7 +12,7 @@ public class BlenderBinControl : MonoBehaviour
     public Transform teaPlateSP;
     //public Transform hotTeaSP;
 
-    public GameObject tea1Plating;
+    public GameObject tea1Plating;      //taro
     public GameObject tea2Plating;
     public GameObject tea3Plating;
 

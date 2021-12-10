@@ -5,25 +5,25 @@ using UnityEngine;
 public class GamePlay : MonoBehaviour
 {
     // options are "empty", "cooking", "full"
-    public static string topping1Cook = "empty";
-    public static string topping2Cook = "empty";
-    public static string topping3Cook = "empty";
+    //public static string topping1Cook = "empty";
+    //public static string topping2Cook = "empty";
+    //public static string topping3Cook = "empty";
 
-    public static string tea1Cook = "empty";
-    public static string tea2Cook = "empty";
-    public static string tea3Cook = "empty";
+    //public static string tea1Cook = "empty";
+    //public static string tea2Cook = "empty";
+    //public static string tea3Cook = "empty";
 
     // plating station
     // options are 0,1 (0=cold, 1=hot)
     public static int plate1Temp;
     // options are "none", "empty", "tea", "full"
     public static string plate1Cup = "none";        // ice cup
-    public static string plate2Cup = "none";        // hot cup
+    //public static string plate2Cup = "none";        // hot cup
     // options are "0", "1", "2", "3"
     public static int plate1Topping = 0;
     public static int plate1Tea = 0;
-    public static int plate2Topping = 0;
-    public static int plate2Tea = 0;
+    //public static int plate2Topping = 0;
+    //public static int plate2Tea = 0;
 
 
     // blender station

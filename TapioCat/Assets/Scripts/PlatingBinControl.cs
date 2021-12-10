@@ -55,7 +55,7 @@ public class PlatingBinControl : MonoBehaviour
         spawnPoints[1] = teaPickupSP;
         spawnPoints[2] = toppingPickupSP;
 
-        if (GamePlay.plate1Cup == "full"){
+        if (GamePlay.plate1Cup == "full" && GamePlay.pickup == false){
             // setting pickup vars
             GamePlay.pickup = true;
             GamePlay.pickedDrink = ""+GamePlay.plate1Temp+GamePlay.plate1Tea+GamePlay.plate1Topping;
@@ -82,7 +82,7 @@ public class PlatingBinControl : MonoBehaviour
                 playerIceCup.gameObject.SetActive(true);
                 // then deactivate
 
-                
+
             } else if (GamePlay.plate1Temp == 1){       // hot
                 // first move children
                 int ord = 6;
@@ -105,6 +105,8 @@ public class PlatingBinControl : MonoBehaviour
 
             // resetting plating vars
             GamePlay.plate1Cup = "none";
+            GamePlay.plate1Topping = 0;
+            GamePlay.plate1Tea = 0;
             //TODO: reset all temp,tea,topping vars somewhere please
         }
     }

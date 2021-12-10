@@ -24,7 +24,11 @@ public class CookTea : MonoBehaviour
         if (gameObject.activeSelf){
             //print(cookTime);
             cookTime += Time.deltaTime;
+            // cooking animation
+            // blending sound
             if (cookTime > timeTilCooked){
+                // stops blending
+                // ding soung?
                 // TODO: add animations? add burning (add another range)?
                 if (gameObject.CompareTag("1")){
                     print("tea1 cooked");
