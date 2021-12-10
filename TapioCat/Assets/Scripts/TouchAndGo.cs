@@ -8,7 +8,10 @@ public class TouchAndGo : MonoBehaviour {
 	float moveSpeed = 5f;
 
 	Rigidbody2D rb;
-
+	
+	public Animator animator;
+	public float screenWidth;
+	private float horizontal = 0;
 	Touch touch;
 	Vector3 touchPosition, whereToMove;
 	bool isMoving = false;
@@ -20,6 +23,8 @@ public class TouchAndGo : MonoBehaviour {
 
 	void Start () {
 		rb = GetComponent<Rigidbody2D> ();
+		animator = GetComponent<Animator>();
+		screenWidth = Screen.width;
 
 		// deactivate cup objects at start
 		foreach (Transform child in transform){
@@ -38,25 +43,35 @@ public class TouchAndGo : MonoBehaviour {
 			touch = Input.GetTouch (0);
 
 			if (touch.phase == TouchPhase.Began) {
-					previousDistanceToTouchPos = 0;
-					currentDistanceToTouchPos = 0;
-					isMoving = true;
-					touchPosition = Camera.main.ScreenToWorldPoint (touch.position);
-					touchPosition.z = 0;
-					whereToMove = (touchPosition - transform.position).normalized;
-					rb.velocity = new Vector2 (whereToMove.x * moveSpeed, whereToMove.y * moveSpeed);
-				}
-		}
-
-		if (currentDistanceToTouchPos > previousDistanceToTouchPos) {
+				if (touch.position.x > screenWidth / 2)
+                {
+                    horizontal = 1.0f;
+					transform.localScale = new Vector3(1, 1, 1);
+                }
+                if (touch.position.x < screenWidth / 2)
+                {
+                    horizontal = -1.0f;
+					transform.localScale = new Vector3(-1, 1, 1);
+                }
+				previousDistanceToTouchPos = 0;
+				currentDistanceToTouchPos = 0;
+				isMoving = true;
+				touchPosition = Camera.main.ScreenToWorldPoint (touch.position);
+				touchPosition.z = 0;
+				whereToMove = (touchPosition - transform.position).normalized;
+				rb.velocity = new Vector2 (whereToMove.x * moveSpeed, whereToMove.y * moveSpeed);
+			}
+		} else if (currentDistanceToTouchPos > previousDistanceToTouchPos) {
 			isMoving = false;
 			rb.velocity = Vector2.zero;
+			horizontal = 0.0f;
 		}
 
 		if (isMoving)
 			previousDistanceToTouchPos = (touchPosition - transform.position).magnitude;
-	}
 
+		animator.SetFloat("Horizontal", horizontal);
+	}
 
 	IEnumerator addCustomer(float time) {
 		if (waiting == true || GamePlay.customerTotal >= 6){
