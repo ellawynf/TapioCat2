@@ -853,6 +853,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 4687597707251737179, guid: 0c6d0b44eba2e4e1fa406861b90c332e, type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 1765991081}
     m_RemovedComponents:
     - {fileID: 101030074, guid: 0c6d0b44eba2e4e1fa406861b90c332e, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 0c6d0b44eba2e4e1fa406861b90c332e, type: 3}

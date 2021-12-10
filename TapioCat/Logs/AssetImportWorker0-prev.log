@@ -168,3 +168,4 @@ Received Import Request.
   path: Assets/Animations/Player.controller
   artifactKey: Guid(84bd26f29a42a43a8b392c17a1879846) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
 Start importing Assets/Animations/Player.controller using Guid(84bd26f29a42a43a8b392c17a1879846) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '40971db3d8b20f33fcfdf199a777e447') in 1.939732 seconds 
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
