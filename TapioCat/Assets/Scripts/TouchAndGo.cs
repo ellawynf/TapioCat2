@@ -30,6 +30,7 @@ public class TouchAndGo : MonoBehaviour {
 		foreach (Transform child in transform){
 			child.gameObject.SetActive(false);
 		}
+			
 	}
 	
 	void Update () {
@@ -44,15 +45,15 @@ public class TouchAndGo : MonoBehaviour {
 
 			if (touch.phase == TouchPhase.Began) {
 				if (touch.position.x > screenWidth / 2)
-                {
-                    horizontal = 1.0f;
+				{
+					horizontal = 1.0f;
 					transform.localScale = new Vector3(1, 1, 1);
-                }
-                if (touch.position.x < screenWidth / 2)
-                {
-                    horizontal = -1.0f;
+				}
+				if (touch.position.x < screenWidth / 2)
+				{
+					horizontal = -1.0f;
 					transform.localScale = new Vector3(-1, 1, 1);
-                }
+				}
 				previousDistanceToTouchPos = 0;
 				currentDistanceToTouchPos = 0;
 				isMoving = true;
