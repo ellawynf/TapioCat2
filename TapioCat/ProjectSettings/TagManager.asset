@@ -10,6 +10,8 @@ TagManager:
   - 3
   - Ice
   - Hot
+  - 4
+  - 5
   layers:
   - Default
   - TransparentFX
