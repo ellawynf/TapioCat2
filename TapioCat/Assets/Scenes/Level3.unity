@@ -857,6 +857,10 @@ PrefabInstance:
       propertyPath: animator
       value: 
       objectReference: {fileID: 1765991081}
+    - target: {fileID: 4687597707251737179, guid: 0c6d0b44eba2e4e1fa406861b90c332e, type: 3}
+      propertyPath: queueGrowthTime
+      value: 45
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 101030074, guid: 0c6d0b44eba2e4e1fa406861b90c332e, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 0c6d0b44eba2e4e1fa406861b90c332e, type: 3}
@@ -6421,9 +6425,13 @@ MonoBehaviour:
   tea1Plating: {fileID: 6077207879283608147, guid: 5a63b13ab49a343c68f49573ec234a49, type: 3}
   tea2Plating: {fileID: 7495259957548507118, guid: 55d0f963afde94953837138d0baa2fd4, type: 3}
   tea3Plating: {fileID: 3627612173153103816, guid: 024546269ba17495ab330f190ca02677, type: 3}
+  tea4Plating: {fileID: 0}
+  tea5Plating: {fileID: 0}
   tea1Cook: {fileID: 841841663}
   tea2Cook: {fileID: 277732196}
   tea3Cook: {fileID: 795650297}
+  tea4Cook: {fileID: 0}
+  tea5Cook: {fileID: 0}
   iceParentCup: {fileID: 321623165712536335}
   hotParentCup: {fileID: 8318708874061579497}
 --- !u!1 &1765991075 stripped

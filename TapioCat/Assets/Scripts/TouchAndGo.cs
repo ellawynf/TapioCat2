@@ -17,6 +17,7 @@ public class TouchAndGo : MonoBehaviour {
 	bool isMoving = false;
 
 	//adding customers to queue
+	public float queueGrowthTime = 30.0f;
 	public bool waiting = false;
 
 	float previousDistanceToTouchPos, currentDistanceToTouchPos;
@@ -35,7 +36,7 @@ public class TouchAndGo : MonoBehaviour {
 	
 	void Update () {
 
-		StartCoroutine(addCustomer(60));
+		StartCoroutine(addCustomer(queueGrowthTime)); //check if we should add someone
 
 		if (isMoving)
 			currentDistanceToTouchPos = (touchPosition - transform.position).magnitude;
@@ -75,11 +76,15 @@ public class TouchAndGo : MonoBehaviour {
 	}
 
 	IEnumerator addCustomer(float time) {
-		if (waiting == true || GamePlay.customerTotal >= 6){
+		if (waiting == true || GamePlay.customerTotal >= 6){ // if we already know we are waiting to add someone or we have hit the customer limit
 			yield break;
 		}
-		GamePlay.customerQueue++;
+		waiting = true; //know we are waiting
+		GamePlay.customerQueue++; //increment both the queue and the total num of customers seen in the level
 		GamePlay.customerTotal++;
-		yield return new WaitForSeconds(time);
+		print("JUST ADDED SOMEONE TO THE QUEUE: ");
+		print(GamePlay.customerQueue);
+		yield return new WaitForSeconds(time); //wait to execute all code between if and here until time seconds
+		waiting = false; //reset our waiting
 	}
 }
