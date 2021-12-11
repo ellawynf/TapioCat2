@@ -26,7 +26,7 @@ public class TouchAndGo : MonoBehaviour {
 		animator = GetComponent<Animator>();
 		screenWidth = Screen.width;
 
-		// deactivate cup objects at start
+		// deactivate cup objects in player's hand at start
 		foreach (Transform child in transform){
 			child.gameObject.SetActive(false);
 		}

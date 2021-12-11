@@ -39,6 +39,12 @@ public class CookTea : MonoBehaviour
                 } else if (gameObject.CompareTag("3")){
                     print("tea3 cooked");
                     GamePlay.blender = "full";
+                } else if (gameObject.CompareTag("4")){
+                    print("tea4 cooked");
+                    GamePlay.blender = "full";
+                }else if (gameObject.CompareTag("5")){
+                    print("tea5 cooked");
+                    GamePlay.blender = "full";
                 }
             }           
         }

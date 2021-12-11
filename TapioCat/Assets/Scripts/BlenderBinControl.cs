@@ -15,10 +15,14 @@ public class BlenderBinControl : MonoBehaviour
     public GameObject tea1Plating;      //taro
     public GameObject tea2Plating;
     public GameObject tea3Plating;
+    public GameObject tea4Plating;
+    public GameObject tea5Plating;
 
     public GameObject tea1Cook;
     public GameObject tea2Cook;
     public GameObject tea3Cook;
+    public GameObject tea4Cook;
+    public GameObject tea5Cook;
 
     public GameObject iceParentCup;
     public GameObject hotParentCup;
@@ -59,6 +63,26 @@ public class BlenderBinControl : MonoBehaviour
                     }
 
                     GamePlay.plate1Tea = 3;
+                    tea3Cook.SetActive(false);
+                } else if (GamePlay.blender_contents == 4){     // tea4
+                    if (GamePlay.plate1Temp == 0){      // cold
+                        Instantiate(tea4Plating, teaPlateSP.position, tea4Plating.transform.rotation, iceParentCup.transform); 
+
+                    } else if (GamePlay.plate1Temp == 1){   // hot
+                        Instantiate(tea4Plating, teaPlateSP.position, tea4Plating.transform.rotation, hotParentCup.transform); 
+                    }
+
+                    GamePlay.plate1Tea = 4;
+                    tea4Cook.SetActive(false);
+                } else if (GamePlay.blender_contents == 5){     // tea5
+                    if (GamePlay.plate1Temp == 0){      // cold
+                        Instantiate(tea5Plating, teaPlateSP.position, tea5Plating.transform.rotation, iceParentCup.transform); 
+
+                    } else if (GamePlay.plate1Temp == 1){   // hot
+                        Instantiate(tea5Plating, teaPlateSP.position, tea5Plating.transform.rotation, hotParentCup.transform); 
+                    }
+
+                    GamePlay.plate1Tea = 5;
                     tea3Cook.SetActive(false);
                 }
 

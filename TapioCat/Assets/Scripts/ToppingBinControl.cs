@@ -54,6 +54,18 @@ public class ToppingBinControl : MonoBehaviour
         }
     }
 
+    public void Bean(){
+        if (PlaceTopping()){
+            GamePlay.plate1Topping = 4;
+        }
+    }
+
+    public void Popping(){
+        if (PlaceTopping()){
+            GamePlay.plate1Topping = 5;
+        }
+    }
+
     /*void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player")){

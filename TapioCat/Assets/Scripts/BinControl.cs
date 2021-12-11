@@ -69,6 +69,30 @@ public class BinControl : MonoBehaviour
         }
     }
 
+    public void Black(){
+        if (GamePlay.blender == "empty"){
+            // put the tea in the blender
+            teaCook.SetActive(true);
+            _audioSource.PlayOneShot(teaSound);
+            GamePlay.blender = "cooking";
+
+            // keeping track of what tea is in there
+            GamePlay.blender_contents = 4;            
+        } 
+    }
+
+    public void Strawberry(){
+        if (GamePlay.blender == "empty"){
+            // put the tea in the blender
+            teaCook.SetActive(true);
+            _audioSource.PlayOneShot(teaSound);
+            GamePlay.blender = "cooking";
+
+            // keeping track of what tea is in there
+            GamePlay.blender_contents = 5;            
+        }
+    }
+
     /*void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player")){
