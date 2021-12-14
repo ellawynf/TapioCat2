@@ -73,12 +73,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2413806693520163455, guid: ebe73ca9363db456bacf42c025bb4847, type: 3}
-  m_Color: {r: 0.69438803, g: 0.65471697, b: 1, a: 1}
+  m_Sprite: {fileID: 1567512342, guid: e72e8dd752d59401aa24fd103084b03b, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1.1, y: 1.55}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -98,7 +98,7 @@ GameObject:
   - component: {fileID: 4889249717004049325}
   - component: {fileID: 7725679575682846081}
   m_Layer: 0
-  m_Name: Customer
+  m_Name: Customer5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -113,7 +113,7 @@ Transform:
   m_GameObject: {fileID: 8975166969897459967}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -1.7314261, y: 2.235166, z: 2.8688428}
-  m_LocalScale: {x: 3, y: 3, z: 3}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5381794154215495568}
@@ -197,7 +197,6 @@ MonoBehaviour:
   - {fileID: 1213830826099293768}
   - {fileID: 6082500716836287229}
   customerSprite: {fileID: 5345087055631542177}
-  customerQueue: 0
   drinkOrdered: 
   atCounter: 0
   coins: {fileID: 8300000, guid: d4b55afd23dec8f47a268498aa68efe5, type: 3}
@@ -214,18 +213,18 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.35423046, y: 0}
+  m_Offset: {x: 0.06897676, y: 0.14531785}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
+    oldSize: {x: 1.1, y: 1.55}
+    newSize: {x: 1.1, y: 1.55}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.7084609, y: 1}
+  m_Size: {x: 2.278968, y: 1.67815}
   m_EdgeRadius: 0
 --- !u!82 &7725679575682846081
 AudioSource:
@@ -434,6 +433,30 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: -0.412
       objectReference: {fileID: 0}
+    - target: {fileID: 6250405864208767146, guid: 5dbfe22531e4f0a44906cababc762ae6, type: 3}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6250405864208767146, guid: 5dbfe22531e4f0a44906cababc762ae6, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6250405864208767146, guid: 5dbfe22531e4f0a44906cababc762ae6, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6250405864208767146, guid: 5dbfe22531e4f0a44906cababc762ae6, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6250405864208767146, guid: 5dbfe22531e4f0a44906cababc762ae6, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 6250405864208767146, guid: 5dbfe22531e4f0a44906cababc762ae6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.24
+      objectReference: {fileID: 0}
     - target: {fileID: 6354337569107961182, guid: 5dbfe22531e4f0a44906cababc762ae6, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -452,11 +475,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6354337569107961182, guid: 5dbfe22531e4f0a44906cababc762ae6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.07968124
+      value: 0.67
       objectReference: {fileID: 0}
     - target: {fileID: 6354337569107961182, guid: 5dbfe22531e4f0a44906cababc762ae6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.09172853
+      value: 0.74
       objectReference: {fileID: 0}
     - target: {fileID: 6354337569107961182, guid: 5dbfe22531e4f0a44906cababc762ae6, type: 3}
       propertyPath: m_LocalPosition.z

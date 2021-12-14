@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 20
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -575,7 +575,6 @@ TextureImporter:
       Customer 5_32: 1888472910
       Customer 5_20: -723191846
       Customer 5_8: 67184669
-      Customer 5_22: 784784408
       Customer 5_12: -295636559
       Customer 5_7: -1751901472
       Customer 5_17: 1989723590
@@ -595,6 +594,7 @@ TextureImporter:
       Customer 5_4: 828397864
       Customer 5_6: -676482348
       Customer 5_30: 1951502689
+      Customer 5_22: 784784408
       Customer 5_15: 247039977
       Customer 5_13: 1749168404
       Customer 5_26: -1100915367
