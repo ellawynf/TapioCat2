@@ -37,7 +37,7 @@ public class TouchAndGo : MonoBehaviour {
 	void Update () {
 
 		StartCoroutine(addCustomer(queueGrowthTime)); //check if we should add someone
-
+		animator.SetBool("HoldDrink", GamePlay.pickup);
 		if (isMoving)
 			currentDistanceToTouchPos = (touchPosition - transform.position).magnitude;
 		
@@ -49,7 +49,8 @@ public class TouchAndGo : MonoBehaviour {
 					if(GamePlay.pickup == true) {
 						horizontal = 1.0f;
 						transform.localScale = new Vector3(-1, 1, 1);
-					} else {
+					}
+					if(GamePlay.pickup == false) {
 						horizontal = 1.0f;
 						transform.localScale = new Vector3(1, 1, 1);
 					}
@@ -59,7 +60,8 @@ public class TouchAndGo : MonoBehaviour {
 					if(GamePlay.pickup == true) {
 						horizontal = -1.0f;
 						transform.localScale = new Vector3(1, 1, 1);
-					} else {
+					} 
+					if(GamePlay.pickup == false) {
 						horizontal = -1.0f;
 						transform.localScale = new Vector3(-1, 1, 1);
 					}
@@ -82,7 +84,7 @@ public class TouchAndGo : MonoBehaviour {
 			previousDistanceToTouchPos = (touchPosition - transform.position).magnitude;
 
 		animator.SetFloat("Horizontal", horizontal);
-		animator.SetBool("HoldDrink", GamePlay.pickup);
+		
 	}
 
 	IEnumerator addCustomer(float time) {
