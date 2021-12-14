@@ -16,12 +16,15 @@ public class CustomerOrder : MonoBehaviour
     public AudioClip coins;
     AudioSource _audioSource;
 
+    private GameObject player;
+
 
     // Start is called before the first frame update
     void Start()
     {
         //set up audio
         _audioSource = GetComponent<AudioSource>();
+        player = GameObject.FindWithTag("Player");
 
         //set all cup variables to no
         //temp[0].SetActive(false);
@@ -52,9 +55,26 @@ public class CustomerOrder : MonoBehaviour
             if (GamePlay.pickedDrink == drinkOrdered){ //if it's the thing we want
                 print("delivering");
                 _audioSource.PlayOneShot(coins);
+
+                // resetting gameplay vars
                 GamePlay.totalScore++;
                 GamePlay.pickup = false;
                 GamePlay.pickedDrink = "None";
+
+                // deactivating and destroying player objects
+                // child is each cup object
+                foreach (Transform child in player.transform){
+                    if (child.gameObject.CompareTag("Ice") || child.gameObject.CompareTag("Hot")){      // making sure we don't try this on the spawn point objects
+                        if (child.gameObject.activeSelf){           // only do this to the active cup
+                            while (child.childCount > 0){           // destroying each child of the active cup
+                                DestroyImmediate(child.GetChild(0).gameObject);
+                            }
+                            child.gameObject.SetActive(false);      // setting the active cup to inactive
+                        }
+                    }
+                }
+
+                // resetting customer vars
                 atCounter = false;
                 temp[ice].SetActive(false);
                 teaTypes[tea-1].SetActive(false);
