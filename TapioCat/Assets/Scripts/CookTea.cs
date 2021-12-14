@@ -10,11 +10,15 @@ public class CookTea : MonoBehaviour
 
     float cookTime;
     public int timeTilCooked = 6;
-
+    public Animator animator;
     /*void Start() {
         cookTime = 0;    
     }*/
 
+    void Start () {
+		animator = GetComponent<Animator>();
+
+    }
     private void OnEnable() {
         cookTime = 0;
     }
@@ -24,10 +28,10 @@ public class CookTea : MonoBehaviour
         if (gameObject.activeSelf){
             //print(cookTime);
             cookTime += Time.deltaTime;
-            // cooking animation
+            animator.SetBool("Blending", true);
             // blending sound
             if (cookTime > timeTilCooked){
-                // stops blending
+                animator.SetBool("Blending", false);
                 // ding soung?
                 // TODO: add animations? add burning (add another range)?
                 if (gameObject.CompareTag("1")){

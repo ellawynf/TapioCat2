@@ -1401,7 +1401,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 277732196}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.021331308, y: -0.002, z: 0}
+  m_LocalPosition: {x: 0.003, y: -0.008, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1473,6 +1473,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeTilCooked: 6
+  animator: {fileID: 0}
 --- !u!1001 &286295700
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3252,7 +3253,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 795650297}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.0043908283, y: -0.004, z: 0}
+  m_LocalPosition: {x: 0.004, y: -0.008, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3272,6 +3273,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeTilCooked: 6
+  animator: {fileID: 0}
 --- !u!1001 &796890764
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3559,6 +3561,7 @@ GameObject:
   - component: {fileID: 841841664}
   - component: {fileID: 841841665}
   - component: {fileID: 841841666}
+  - component: {fileID: 841841667}
   m_Layer: 0
   m_Name: TaroCook
   m_TagString: 1
@@ -3574,7 +3577,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 841841663}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.0128609985, y: -0.002, z: 0}
+  m_LocalPosition: {x: 0.002, y: -0.009, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3646,6 +3649,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeTilCooked: 6
+  animator: {fileID: 841841667}
+--- !u!95 &841841667
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 841841663}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c26616a6e34dc4c0a97658283cf1a229, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &850423345
 GameObject:
   m_ObjectHideFlags: 0
@@ -6360,7 +6384,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1740942296}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.01, y: 0.0297, z: 2.870979}
+  m_LocalPosition: {x: 2.045, y: 0.016, z: 2.870979}
   m_LocalScale: {x: 2.0760312, y: 1.6480007, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
