@@ -45,15 +45,24 @@ public class TouchAndGo : MonoBehaviour {
 			touch = Input.GetTouch (0);
 
 			if (touch.phase == TouchPhase.Began) {
-				if (touch.position.x > screenWidth / 2)
-				{
-					horizontal = 1.0f;
-					transform.localScale = new Vector3(1, 1, 1);
+				if (touch.position.x > screenWidth / 2) {
+					if(GamePlay.pickup == true) {
+						horizontal = 1.0f;
+						transform.localScale = new Vector3(-1, 1, 1);
+					} else {
+						horizontal = 1.0f;
+						transform.localScale = new Vector3(1, 1, 1);
+					}
 				}
 				if (touch.position.x < screenWidth / 2)
 				{
-					horizontal = -1.0f;
-					transform.localScale = new Vector3(-1, 1, 1);
+					if(GamePlay.pickup == true) {
+						horizontal = -1.0f;
+						transform.localScale = new Vector3(1, 1, 1);
+					} else {
+						horizontal = -1.0f;
+						transform.localScale = new Vector3(-1, 1, 1);
+					}
 				}
 				previousDistanceToTouchPos = 0;
 				currentDistanceToTouchPos = 0;
@@ -73,6 +82,7 @@ public class TouchAndGo : MonoBehaviour {
 			previousDistanceToTouchPos = (touchPosition - transform.position).magnitude;
 
 		animator.SetFloat("Horizontal", horizontal);
+		animator.SetBool("HoldDrink", GamePlay.pickup);
 	}
 
 	IEnumerator addCustomer(float time) {
