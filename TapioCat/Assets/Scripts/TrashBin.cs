@@ -13,10 +13,15 @@ public class TrashBin : MonoBehaviour
     public GameObject hotCup;
     public GameObject iceCup;
 
+    //trash sounds
+    public AudioClip trashSound;
+    AudioSource _audioSource;
+
     // Start is called before the first frame update
     void Start()
     {
         player = GameObject.FindWithTag("Player");
+        _audioSource = GetComponent<AudioSource>();
     }
 
     // trashes EITHER the drink in the player's hand OR the drink on the plate
@@ -33,6 +38,7 @@ public class TrashBin : MonoBehaviour
                                 DestroyImmediate(child.GetChild(0).gameObject);
                             }
                             child.gameObject.SetActive(false);      // setting the active cup to inactive
+                            _audioSource.PlayOneShot(trashSound);
                         }
                     }
                 }
@@ -51,7 +57,7 @@ public class TrashBin : MonoBehaviour
                 }
                 // deactivating the cup
                 iceCup.SetActive(false);
-
+                _audioSource.PlayOneShot(trashSound);
 
             } else if (GamePlay.plate1Temp == 1){       // hot
                 // destroying the children of the cup (tea, topping)
@@ -60,6 +66,7 @@ public class TrashBin : MonoBehaviour
                 }
                 // deactivating the cup
                 hotCup.SetActive(false);
+                _audioSource.PlayOneShot(trashSound);
             }
 
             // clear GamePlay vars

@@ -14,10 +14,13 @@ public class CookTea : MonoBehaviour
     /*void Start() {
         cookTime = 0;    
     }*/
+    //pour sounds
+    public AudioClip dingSound;
+    AudioSource _audioSource;
 
     void Start () {
 		animator = GetComponent<Animator>();
-
+        _audioSource = GetComponent<AudioSource>();
     }
     private void OnEnable() {
         cookTime = 0;
@@ -32,7 +35,10 @@ public class CookTea : MonoBehaviour
             // blending sound
             if (cookTime > timeTilCooked){
                 animator.SetBool("Blending", false);
-                // ding soung?
+                // ding sound?
+                if(GamePlay.blender != "full"){
+                    _audioSource.PlayOneShot(dingSound);
+                }
                 // TODO: add animations? add burning (add another range)?
                 if (gameObject.CompareTag("1")){
                     print("tea1 cooked");

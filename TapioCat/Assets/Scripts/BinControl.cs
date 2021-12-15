@@ -13,7 +13,7 @@ public class BinControl : MonoBehaviour
     Moves tea from bin to blender.
     *****************/
     public GameObject teaCook;
-    public AudioClip teaSound;
+    public AudioClip blendSound;
     //public AudioClip toppingSound;
     AudioSource _audioSource;
 
@@ -37,7 +37,7 @@ public class BinControl : MonoBehaviour
         if (GamePlay.blender == "empty"){
             // put the tea in the blender
             teaCook.SetActive(true);
-            _audioSource.PlayOneShot(teaSound);
+            _audioSource.PlayOneShot(blendSound);
             GamePlay.blender = "cooking";
 
             // keeping track of what tea is in there
@@ -49,7 +49,7 @@ public class BinControl : MonoBehaviour
         if (GamePlay.blender == "empty"){
             // put the tea in the blender
             teaCook.SetActive(true);
-            _audioSource.PlayOneShot(teaSound);
+            _audioSource.PlayOneShot(blendSound);
             GamePlay.blender = "cooking";
 
             // keeping track of what tea is in there
@@ -61,7 +61,7 @@ public class BinControl : MonoBehaviour
         if (GamePlay.blender == "empty"){
             // put the tea in the blender
             teaCook.SetActive(true);
-            _audioSource.PlayOneShot(teaSound);
+            _audioSource.PlayOneShot(blendSound);
             GamePlay.blender = "cooking";
 
             // keeping track of what tea is in there
@@ -73,7 +73,7 @@ public class BinControl : MonoBehaviour
         if (GamePlay.blender == "empty"){
             // put the tea in the blender
             teaCook.SetActive(true);
-            _audioSource.PlayOneShot(teaSound);
+            _audioSource.PlayOneShot(blendSound);
             GamePlay.blender = "cooking";
 
             // keeping track of what tea is in there
@@ -85,7 +85,7 @@ public class BinControl : MonoBehaviour
         if (GamePlay.blender == "empty"){
             // put the tea in the blender
             teaCook.SetActive(true);
-            _audioSource.PlayOneShot(teaSound);
+            _audioSource.PlayOneShot(blendSound);
             GamePlay.blender = "cooking";
 
             // keeping track of what tea is in there

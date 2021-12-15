@@ -27,6 +27,14 @@ public class BlenderBinControl : MonoBehaviour
     public GameObject iceParentCup;
     public GameObject hotParentCup;
 
+    //sounds
+    public AudioClip pourSound;
+    AudioSource _audioSource;
+
+    void Start(){
+        _audioSource = GetComponent<AudioSource>();
+    }
+
     public void Blender(){
         if (GamePlay.blender == "full"){
 
@@ -85,7 +93,7 @@ public class BlenderBinControl : MonoBehaviour
                     GamePlay.plate1Tea = 5;
                     tea3Cook.SetActive(false);
                 }
-
+                _audioSource.PlayOneShot(pourSound);
                 GamePlay.blender_contents = 0;
                 GamePlay.plate1Cup = "tea";
                 GamePlay.blender = "empty";                

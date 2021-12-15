@@ -16,7 +16,14 @@ public class ToppingBinControl : MonoBehaviour
     public GameObject iceParentCup;
     public GameObject hotParentCup;
 
+    //sounds
+    public AudioClip toppingSound;
+    AudioSource _audioSource;
+
     //public Transform hotToppingSP;
+    void Start(){
+        _audioSource = GetComponent<AudioSource>();
+    }
 
     // try to get this to work generically
     public bool PlaceTopping(){
@@ -29,6 +36,7 @@ public class ToppingBinControl : MonoBehaviour
                 Instantiate(toppingPlating, toppingPlateSP.position, toppingPlating.transform.rotation, hotParentCup.transform);
             }
             GamePlay.plate1Cup = "full";
+            _audioSource.PlayOneShot(toppingSound);
             return true;
         } else {
             return false;

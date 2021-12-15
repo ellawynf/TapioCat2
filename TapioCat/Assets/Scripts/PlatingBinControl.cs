@@ -23,12 +23,18 @@ public class PlatingBinControl : MonoBehaviour
     public Transform teaPickupSP;
     public Transform toppingPickupSP;
 
+    //sounds
+    public AudioClip iceSound;
+    public AudioClip hotSound;
+    public AudioClip pickupSound;
+    AudioSource _audioSource;
+
     //private Transform [] spawnPoints;
 
     private void Start() {
         iceCup.SetActive(false);
         hotCup.SetActive(false);
-
+        _audioSource = GetComponent<AudioSource>();
         /*spawnPoints[0] = teaPickupSP;
         spawnPoints[1] = toppingPickupSP;*/
     }
@@ -39,10 +45,12 @@ public class PlatingBinControl : MonoBehaviour
             if (gameObject.CompareTag("Ice")){
                 GamePlay.plate1Temp = 0;
                 iceCup.SetActive(true);
+                _audioSource.PlayOneShot(iceSound);
 
             } else if (gameObject.CompareTag("Hot")){
                 GamePlay.plate1Temp = 1;
                 hotCup.SetActive(true);
+                _audioSource.PlayOneShot(hotSound);
             }
 
             GamePlay.plate1Cup = "empty";
@@ -60,6 +68,7 @@ public class PlatingBinControl : MonoBehaviour
             GamePlay.pickup = true;
             GamePlay.pickedDrink = ""+GamePlay.plate1Temp+GamePlay.plate1Tea+GamePlay.plate1Topping;
             print(GamePlay.pickedDrink);
+            _audioSource.PlayOneShot(pickupSound);
 
             // moving picked up object
             if (GamePlay.plate1Temp == 0){      // cold

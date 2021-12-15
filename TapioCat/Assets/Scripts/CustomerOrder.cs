@@ -4,11 +4,15 @@ using UnityEngine;
 
 public class CustomerOrder : MonoBehaviour
 {
+    //lists of objects needed to become invisible
     public GameObject[] temp;
     public GameObject[] teaTypes;
     public GameObject[] toppingTypes;
     public GameObject[] customerTypes;
     public GameObject customerSprite;
+    //integers that can be changed to the number of toppings etc in each level
+    public int numTea = 3;
+    public int numTop = 3;
     int ice;
     int tea;
     int topping;
@@ -45,8 +49,8 @@ public class CustomerOrder : MonoBehaviour
         }
         //will want to move this out of start and into the code that checks for a new customer
         ice = (Random.Range(1,4)%2);
-        tea = Random.Range(1,3);
-        topping = Random.Range(1,3);
+        tea = Random.Range(1,numTea);
+        topping = Random.Range(1,numTop);
         cust = Random.Range(1,5);
         //I do not know why we don't need these lines of code, but getting rid of them solves the sprite problem
         /*temp[ice].SetActive(true);
@@ -128,8 +132,8 @@ public class CustomerOrder : MonoBehaviour
             atCounter = true;
             customerSprite.SetActive(true);
             ice = (Random.Range(1,4)%2);
-            tea = Random.Range(1,3);
-            topping = Random.Range(1,3);
+            tea = Random.Range(1,numTea);
+            topping = Random.Range(1,numTop);
             cust = Random.Range(1,5);
             temp[ice].SetActive(true);
             teaTypes[tea-1].SetActive(true);
