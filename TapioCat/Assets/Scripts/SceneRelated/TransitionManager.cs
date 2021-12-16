@@ -3,16 +3,25 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using UnityEngine.Video;
 
 public class TransitionManager : MonoBehaviour
 {
     float maxVol = .1f;
     public AudioClip[] clips;
+    
+    
     private float fadeSpeed = .5f;
     private AudioSource[] audioSources;
     private int trackIndex = 0;
     public Image fadeImg;
 
+    public RawImage videoImage;
+    
+    private VideoPlayer videoPlayer;
+    public VideoClip[] videoClips;
+    public VideoClip videoClip;
+    
 
 
     void Awake(){
@@ -22,6 +31,9 @@ public class TransitionManager : MonoBehaviour
         else{
             DontDestroyOnLoad(gameObject);
             audioSources = GetComponents<AudioSource>();
+            videoPlayer = GetComponent<VideoPlayer>();
+            Debug.Log("Finished Coroutine at timestamp : ");
+            
         }
     }
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode){
@@ -53,7 +65,7 @@ public class TransitionManager : MonoBehaviour
 
     public void LoadScene(string sceneName){
         StartCoroutine(FadeAndLoad(sceneName));
-
+        StartCoroutine(LoadVideo());
     }
 
     IEnumerator FadeAndLoad(string sceneName){
@@ -62,7 +74,19 @@ public class TransitionManager : MonoBehaviour
         fadeImg.CrossFadeAlpha(1,1,true);
         yield return new WaitForSeconds(1);
         SceneManager.LoadScene(sceneName);
+        
     }
+
+    IEnumerator LoadVideo(){
+        fadeImg.gameObject.SetActive(true);
+        Debug.Log("Finished Coroutine at timestamp : " + Time.time);
+        videoPlayer.clip = videoClip;
+        videoPlayer.Play();
+        fadeImg.gameObject.SetActive(false);
+        yield return new WaitForSeconds(1);
+
+    }
+    
     void OnEnable(){
         SceneManager.sceneLoaded += OnSceneLoaded;
     }
