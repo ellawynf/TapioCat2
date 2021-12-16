@@ -24,6 +24,7 @@ public class CustomerOrder : MonoBehaviour
     public int leavingTime = 50;
     public GameObject timer;
     //audio
+    public AudioClip doorbell;
     public AudioClip coins;
     public AudioClip angrySound;
     public AudioClip leaveSound;
@@ -150,6 +151,7 @@ public class CustomerOrder : MonoBehaviour
             toppingTypes[topping-1].SetActive(true);
             customerTypes[cust-1].SetActive(true);
             drinkOrdered = ice.ToString()+tea.ToString()+topping.ToString();
+            _audioSource.PlayOneShot(doorbell);
             print("new cust, CQ: ");
             print(GamePlay.customerQueue);
         }

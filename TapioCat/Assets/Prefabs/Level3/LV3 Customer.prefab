@@ -119,9 +119,16 @@ MonoBehaviour:
   - {fileID: 1710433003082710621}
   - {fileID: 5180469127489464395}
   customerSprite: {fileID: 2040067166003409604}
+  numTea: 3
+  numTop: 3
   drinkOrdered: 
   atCounter: 0
+  leavingTime: 50
+  timer: {fileID: 0}
+  doorbell: {fileID: 8300000, guid: 86eb8609ee3c36640854d2a91b84342f, type: 3}
   coins: {fileID: 8300000, guid: d4b55afd23dec8f47a268498aa68efe5, type: 3}
+  angrySound: {fileID: 8300000, guid: a8cf677001e9dd64bb05be959012b105, type: 3}
+  leaveSound: {fileID: 8300000, guid: 7160ae3479a939846995bde434200fa2, type: 3}
 --- !u!61 &4889249717004049325
 BoxCollider2D:
   m_ObjectHideFlags: 0
