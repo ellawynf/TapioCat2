@@ -1220,10 +1220,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a3ac33f8d2324ec89193b60290afbe1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  toppingPlating: {fileID: 0}
+  toppingPlating: {fileID: 3708253126706676764, guid: f653106b88d644b19a7df148de60522d, type: 3}
   toppingPlateSP: {fileID: 1804839525}
   iceParentCup: {fileID: 507062496}
   hotParentCup: {fileID: 2143271965}
+  toppingSound: {fileID: 0}
 --- !u!1 &340872522
 GameObject:
   m_ObjectHideFlags: 0
@@ -2387,6 +2388,7 @@ MonoBehaviour:
   toppingPlateSP: {fileID: 1804839525}
   iceParentCup: {fileID: 507062496}
   hotParentCup: {fileID: 2143271965}
+  toppingSound: {fileID: 0}
 --- !u!1 &687160676
 GameObject:
   m_ObjectHideFlags: 0
@@ -3146,6 +3148,7 @@ MonoBehaviour:
   toppingPlateSP: {fileID: 1804839525}
   iceParentCup: {fileID: 507062496}
   hotParentCup: {fileID: 2143271965}
+  toppingSound: {fileID: 0}
 --- !u!1 &826982506
 GameObject:
   m_ObjectHideFlags: 0
@@ -3328,6 +3331,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeTilCooked: 6
+  animator: {fileID: 0}
+  dingSound: {fileID: 0}
 --- !u!212 &879840325
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3734,7 +3739,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   teaCook: {fileID: 354297207}
-  teaSound: {fileID: 8300000, guid: 2ebcecd887fffb043a9053fe8694cc08, type: 3}
+  blendSound: {fileID: 0}
 --- !u!1 &1024114426
 GameObject:
   m_ObjectHideFlags: 0
@@ -3781,6 +3786,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeTilCooked: 6
+  animator: {fileID: 0}
+  dingSound: {fileID: 0}
 --- !u!212 &1024114429
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4070,6 +4077,7 @@ MonoBehaviour:
   toppingPlateSP: {fileID: 1804839525}
   iceParentCup: {fileID: 507062496}
   hotParentCup: {fileID: 2143271965}
+  toppingSound: {fileID: 0}
 --- !u!1 &1049581204
 GameObject:
   m_ObjectHideFlags: 0
@@ -4909,6 +4917,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeTilCooked: 6
+  animator: {fileID: 0}
+  dingSound: {fileID: 0}
 --- !u!212 &1203777307
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5228,6 +5238,9 @@ MonoBehaviour:
   playerHotCup: {fileID: 486810047}
   teaPickupSP: {fileID: 2049636098}
   toppingPickupSP: {fileID: 646679447}
+  iceSound: {fileID: 0}
+  hotSound: {fileID: 0}
+  pickupSound: {fileID: 0}
 --- !u!1001 &1311227691
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5412,6 +5425,9 @@ MonoBehaviour:
   playerHotCup: {fileID: 486810047}
   teaPickupSP: {fileID: 2049636098}
   toppingPickupSP: {fileID: 646679447}
+  iceSound: {fileID: 0}
+  hotSound: {fileID: 0}
+  pickupSound: {fileID: 0}
 --- !u!1001 &1312190903
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8569,6 +8585,7 @@ MonoBehaviour:
   tea5Cook: {fileID: 0}
   iceParentCup: {fileID: 507062496}
   hotParentCup: {fileID: 2143271965}
+  pourSound: {fileID: 0}
 --- !u!212 &2045599994
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -8698,6 +8715,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hotCup: {fileID: 2143271965}
   iceCup: {fileID: 507062496}
+  trashSound: {fileID: 0}
 --- !u!1 &2074886024
 GameObject:
   m_ObjectHideFlags: 0
