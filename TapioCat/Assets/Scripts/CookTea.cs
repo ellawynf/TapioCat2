@@ -8,6 +8,8 @@ public class CookTea : MonoBehaviour
     Goes on each TeaCook object at blending station
     *************/
 
+    public GameObject timer;
+
     float cookTime;
     public int timeTilCooked = 6;
     public Animator animator;
@@ -21,25 +23,42 @@ public class CookTea : MonoBehaviour
     void Start () {
 		animator = GetComponent<Animator>();
         _audioSource = GetComponent<AudioSource>();
+
+        timer.SetActive(false);
     }
     private void OnEnable() {
         cookTime = 0;
+        timer.SetActive(true);
+        foreach (Transform child in timer.transform){
+            child.gameObject.SetActive(true);
+        }
+        animator.SetBool("Blending", true);
+
     }
     // Update is called once per frame
     void Update()
     {
         if (gameObject.activeSelf){
-            //print(cookTime);
+            print(cookTime);
             cookTime += Time.deltaTime;
-            animator.SetBool("Blending", true);
-            // blending sound
-            if (cookTime > timeTilCooked){
+
+            if ((int) cookTime == (timeTilCooked / 3)){       // 1/3 of the way done, deactivating first block
+                Transform this_seg = timer.transform.GetChild(0);
+                this_seg.gameObject.SetActive(false);
+            } else if ((int) cookTime == (timeTilCooked / 1.5f)){     // 2/3 of the way done, deactivating second block
+                Transform this_seg = timer.transform.GetChild(1);
+                this_seg.gameObject.SetActive(false);                
+            } else if ((int) cookTime == timeTilCooked){
+                Transform this_seg = timer.transform.GetChild(2);       // 3/3 of the way done, deactivating 3rd block
+                this_seg.gameObject.SetActive(false);
+
                 animator.SetBool("Blending", false);
                 // ding sound?
-                if(GamePlay.blender != "full"){
-                    _audioSource.PlayOneShot(dingSound);
-                }
-                // TODO: add animations? add burning (add another range)?
+                //if(GamePlay.blender != "full"){
+                _audioSource.PlayOneShot(dingSound);
+                    // do we wanna animate the timer first or should it just stay there empty? or should it leave idk?
+                //}
+                // TODO: add burning (add another range)?
                 if (gameObject.CompareTag("1")){
                     print("tea1 cooked");
                     GamePlay.blender = "full";

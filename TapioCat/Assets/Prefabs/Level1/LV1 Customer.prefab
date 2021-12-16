@@ -27,7 +27,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8975166969897459967}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.7314261, y: 2.235166, z: 2.8688428}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
@@ -115,6 +115,8 @@ MonoBehaviour:
   - {fileID: 4746507987646917432}
   - {fileID: 1262959690770677038}
   customerSprite: {fileID: 5345087055631542177}
+  numTea: 1
+  numTop: 1
   drinkOrdered: 
   atCounter: 0
   coins: {fileID: 8300000, guid: d4b55afd23dec8f47a268498aa68efe5, type: 3}

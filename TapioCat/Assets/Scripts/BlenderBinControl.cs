@@ -8,6 +8,7 @@ public class BlenderBinControl : MonoBehaviour
     Goes on blender object
     Move tea from blender to plating
     ****************/
+    public GameObject timer;
 
     public Transform teaPlateSP;
     //public Transform hotTeaSP;
@@ -96,7 +97,8 @@ public class BlenderBinControl : MonoBehaviour
                 _audioSource.PlayOneShot(pourSound);
                 GamePlay.blender_contents = 0;
                 GamePlay.plate1Cup = "tea";
-                GamePlay.blender = "empty";                
+                GamePlay.blender = "empty";  
+                timer.SetActive(false);              
             }              
         }
     }
