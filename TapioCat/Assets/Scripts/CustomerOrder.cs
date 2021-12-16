@@ -19,9 +19,15 @@ public class CustomerOrder : MonoBehaviour
     int cust;
     public string drinkOrdered;
     public bool atCounter;
+    //timer variables
+    float timeWaited;
+    public int leavingTime = 50;
+    public GameObject timer;
+    //audio
     public AudioClip coins;
+    public AudioClip angrySound;
+    public AudioClip leaveSound;
     AudioSource _audioSource;
-
     private GameObject player;
 
 
@@ -31,6 +37,9 @@ public class CustomerOrder : MonoBehaviour
         //set up audio
         _audioSource = GetComponent<AudioSource>();
         player = GameObject.FindWithTag("Player");
+
+        //setup timer
+        timer.SetActive(false);
 
         //set all cup variables to no
         //temp[0].SetActive(false);
@@ -93,6 +102,7 @@ public class CustomerOrder : MonoBehaviour
                 drinkOrdered = "None";
                 customerSprite.SetActive(false);
                 atCounter = false;
+                timeWaited = 0;
                 print("delivered, CQ: ");
                 print(GamePlay.customerQueue);
                 // yeah, also gotta set the sprites to destroy, we can figure that out later
@@ -142,6 +152,33 @@ public class CustomerOrder : MonoBehaviour
             drinkOrdered = ice.ToString()+tea.ToString()+topping.ToString();
             print("new cust, CQ: ");
             print(GamePlay.customerQueue);
+        }
+        if (atCounter == true){
+            timeWaited += Time.deltaTime;
+            if ((int) timeWaited == (leavingTime / 3)){       // 1/3 of the way done, deactivating first block
+                Transform this_seg = timer.transform.GetChild(0);
+                this_seg.gameObject.SetActive(false);
+            }
+            if ((int) timeWaited == (leavingTime / 1.5f)){     // 2/3 of the way done, deactivating second block
+                Transform this_seg = timer.transform.GetChild(1);
+                this_seg.gameObject.SetActive(false);  
+                _audioSource.PlayOneShot(angrySound);              
+            }
+            if ((int) timeWaited == leavingTime){
+                Transform this_seg = timer.transform.GetChild(2);       // 3/3 of the way done, deactivating 3rd block
+                this_seg.gameObject.SetActive(false);
+                _audioSource.PlayOneShot(leaveSound);
+                //copy and pasted from deliver, only difference is no additional points and no happy coin sound
+                atCounter = false;
+                temp[ice].SetActive(false);
+                teaTypes[tea-1].SetActive(false);
+                toppingTypes[topping-1].SetActive(false);
+                customerTypes[cust-1].SetActive(false);
+                drinkOrdered = "None";
+                customerSprite.SetActive(false);
+                atCounter = false;
+                timeWaited = 0;
+            }
         }
     }
 }

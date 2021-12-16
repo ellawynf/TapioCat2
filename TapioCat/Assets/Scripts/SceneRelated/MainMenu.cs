@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class MainMenu : MonoBehaviour
 {
     public AudioClip startSound;
+    public AudioClip buttonSound;
     AudioSource _audioSource;
     TransitionManager _transitionManager;
     private void Start(){
@@ -17,11 +18,11 @@ public class MainMenu : MonoBehaviour
         _transitionManager.LoadScene("Level1");
     }
     public void instructions(){
-        _audioSource.PlayOneShot(startSound);
+        _audioSource.PlayOneShot(buttonSound);
         _transitionManager.LoadScene("Instructions");
     }
     public void quit(){
-        _audioSource.PlayOneShot(startSound);
+        _audioSource.PlayOneShot(buttonSound);
         Application.Quit();
     }
 }
