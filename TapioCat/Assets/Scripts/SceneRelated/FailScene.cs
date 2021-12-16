@@ -18,8 +18,13 @@ public class FailScene : MonoBehaviour
         _transitionManager.LoadScene("MainMenu");
     }
 
-    public void Quit1(){
+    public void GoBack(){
+        _audioSource.PlayOneShot(returnSound);
+        _transitionManager.LoadScene("ChooseLevels");
+    }
+
+    /*public void Quit1(){
         _audioSource.PlayOneShot(returnSound);
         Application.Quit();
-    }
+    }*/
 }

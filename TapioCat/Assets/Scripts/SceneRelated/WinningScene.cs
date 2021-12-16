@@ -18,8 +18,8 @@ public class WinningScene : MonoBehaviour
         _transitionManager.LoadScene("MainMenu");
     }
 
-    public void Quit1(){
+    /*public void Quit1(){
         _audioSource.PlayOneShot(returnSound);
         Application.Quit();
-    }
+    }*/
 }
