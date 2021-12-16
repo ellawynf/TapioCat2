@@ -27,6 +27,7 @@ public class CustomerOrder : MonoBehaviour
     public AudioClip doorbell;
     public AudioClip coins;
     public AudioClip angrySound;
+    bool playAngry = false;
     public AudioClip leaveSound;
     AudioSource _audioSource;
     private GameObject player;
@@ -103,6 +104,7 @@ public class CustomerOrder : MonoBehaviour
                 drinkOrdered = "None";
                 customerSprite.SetActive(false);
                 atCounter = false;
+                playAngry = false;
                 timeWaited = 0;
                 print("delivered, CQ: ");
                 print(GamePlay.customerQueue);
@@ -141,6 +143,7 @@ public class CustomerOrder : MonoBehaviour
         if (atCounter == false && GamePlay.customerQueue > 0){
             GamePlay.customerQueue--;
             atCounter = true;
+            timer.SetActive(true);
             customerSprite.SetActive(true);
             ice = (Random.Range(1,4)%2);
             tea = Random.Range(1,numTea);
@@ -157,14 +160,20 @@ public class CustomerOrder : MonoBehaviour
         }
         if (atCounter == true){
             timeWaited += Time.deltaTime;
+            print(timeWaited);
             if ((int) timeWaited == (leavingTime / 3)){       // 1/3 of the way done, deactivating first block
                 Transform this_seg = timer.transform.GetChild(0);
                 this_seg.gameObject.SetActive(false);
+                print("1/3");
             }
-            if ((int) timeWaited == (leavingTime / 1.5f)){     // 2/3 of the way done, deactivating second block
+            if ((int) timeWaited == ((leavingTime*2) / 3)){     // 2/3 of the way done, deactivating second block
                 Transform this_seg = timer.transform.GetChild(1);
-                this_seg.gameObject.SetActive(false);  
-                _audioSource.PlayOneShot(angrySound);              
+                this_seg.gameObject.SetActive(false);
+                if(playAngry == false){
+                    playAngry = true;
+                    _audioSource.PlayOneShot(angrySound);
+                }
+                print("2/3");             
             }
             if ((int) timeWaited == leavingTime){
                 Transform this_seg = timer.transform.GetChild(2);       // 3/3 of the way done, deactivating 3rd block
@@ -178,8 +187,11 @@ public class CustomerOrder : MonoBehaviour
                 customerTypes[cust-1].SetActive(false);
                 drinkOrdered = "None";
                 customerSprite.SetActive(false);
+                timer.SetActive(false);
                 atCounter = false;
+                playAngry = false;
                 timeWaited = 0;
+                print("LEFT");
             }
         }
     }
