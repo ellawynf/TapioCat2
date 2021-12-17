@@ -106,6 +106,10 @@ public class CustomerOrder : MonoBehaviour
                 atCounter = false;
                 playAngry = false;
                 timeWaited = 0;
+                timer.SetActive(false);
+                foreach (Transform child in timer.transform){
+                    child.gameObject.SetActive(false);
+                }
                 print("delivered, CQ: ");
                 print(GamePlay.customerQueue);
                 // yeah, also gotta set the sprites to destroy, we can figure that out later
@@ -144,6 +148,9 @@ public class CustomerOrder : MonoBehaviour
             GamePlay.customerQueue--;
             atCounter = true;
             timer.SetActive(true);
+            foreach (Transform child in timer.transform){
+                child.gameObject.SetActive(true);
+            }
             customerSprite.SetActive(true);
             ice = (Random.Range(1,4)%2);
             tea = Random.Range(1,numTea);
