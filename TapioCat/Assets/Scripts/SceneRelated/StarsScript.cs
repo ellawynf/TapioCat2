@@ -65,6 +65,9 @@ public class StarsScript : MonoBehaviour
             StartCoroutine(ShowThreeStar());
             
         }
+
+        SceneRelatedGlobal.servedCustomerNum = 0;
+		SceneRelatedGlobal.angryCustomerNum = 0;
         
 
     }

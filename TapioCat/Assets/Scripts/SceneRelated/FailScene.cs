@@ -12,6 +12,8 @@ public class FailScene : MonoBehaviour
     private void Start(){
         _transitionManager = FindObjectOfType<TransitionManager>();
         _audioSource = GetComponent<AudioSource>();
+        SceneRelatedGlobal.servedCustomerNum = 0;
+		SceneRelatedGlobal.angryCustomerNum = 0;
     }
     public void ReturnToMainMenu(){
         _audioSource.PlayOneShot(returnSound);

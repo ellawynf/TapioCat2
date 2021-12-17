@@ -103,8 +103,7 @@ public class TouchAndGo : MonoBehaviour {
 				_transitionManager.LoadScene("LevelTransitionScene");
 			}
 
-			SceneRelatedGlobal.servedCustomerNum = 0;
-			SceneRelatedGlobal.angryCustomerNum = 0;
+			
 		}
 		
 	}
