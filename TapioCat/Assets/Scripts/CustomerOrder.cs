@@ -34,6 +34,9 @@ public class CustomerOrder : MonoBehaviour
     public SpriteRenderer spriteRenderer;
     public Sprite[] spriteArray;
 
+    public int totalNumCustomer;
+    public float percentServed;
+    public ProgressBarFill progressBar;
 
     // Start is called before the first frame update
     void Start()
@@ -71,6 +74,7 @@ public class CustomerOrder : MonoBehaviour
         teaTypes[tea-1].SetActive(true);
         toppingTypes[topping-1].SetActive(true);*/
         drinkOrdered = ice.ToString()+tea.ToString()+topping.ToString();
+        totalNumCustomer = SceneRelatedGlobal.totalNumCustomer;
     }
 
     public void Deliver(){
@@ -112,6 +116,7 @@ public class CustomerOrder : MonoBehaviour
 
                 // SceneRelatedGlobal
                 SceneRelatedGlobal.servedCustomerNum++;
+
                 /*timer.SetActive(false);
                 foreach (Transform child in timer.transform){
                     child.gameObject.SetActive(false);
