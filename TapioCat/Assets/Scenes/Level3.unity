@@ -871,7 +871,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4687597707251737179, guid: 0c6d0b44eba2e4e1fa406861b90c332e, type: 3}
       propertyPath: queueGrowthTime
-      value: 35
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 101030074, guid: 0c6d0b44eba2e4e1fa406861b90c332e, type: 3}
