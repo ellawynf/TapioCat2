@@ -34,6 +34,7 @@ public class BlenderBinControl : MonoBehaviour
 
     void Start(){
         _audioSource = GetComponent<AudioSource>();
+        timer.SetActive(false);
     }
 
     public void Blender(){

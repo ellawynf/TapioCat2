@@ -23,8 +23,6 @@ public class CookTea : MonoBehaviour
     void Start () {
 		animator = GetComponent<Animator>();
         _audioSource = GetComponent<AudioSource>();
-
-        timer.SetActive(false);
     }
     private void OnEnable() {
         cookTime = 0;

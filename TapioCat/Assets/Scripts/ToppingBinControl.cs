@@ -9,6 +9,14 @@ public class ToppingBinControl : MonoBehaviour
     Move topping to plating station
     *************/
 
+    public GameObject timer;
+
+    public GameObject fullbin;
+    public GameObject halfbin;
+    public GameObject lowbin;
+    public GameObject emptybin;
+    private bool cooking = false;
+
     public GameObject toppingPlating;
     
     public Transform toppingPlateSP;
@@ -20,9 +28,16 @@ public class ToppingBinControl : MonoBehaviour
     public AudioClip toppingSound;
     AudioSource _audioSource;
 
+    private int quantity = 12;
+
     //public Transform hotToppingSP;
     void Start(){
         _audioSource = GetComponent<AudioSource>();
+        timer.SetActive(false);
+
+        halfbin.SetActive(false);
+        lowbin.SetActive(false);
+        emptybin.SetActive(false);
     }
 
     // try to get this to work generically
@@ -37,40 +52,136 @@ public class ToppingBinControl : MonoBehaviour
             }
             GamePlay.plate1Cup = "full";
             _audioSource.PlayOneShot(toppingSound);
+            Deplete();
             return true;
         } else {
             return false;
         }
     }
 
-    public void Boba(){
-        // topping must go on after tea for now
-        if (PlaceTopping()){
-            GamePlay.plate1Topping = 1;
+    private void Deplete(){
+        quantity -= 2;          // 2 is the amount that is used each time, can increase or decrease to make toppings run out faster/slower respectively
+        if (quantity == 8){
+            // change to sprite 2
+            fullbin.SetActive(false);
+            halfbin.SetActive(true);
+        } else if (quantity == 4){
+            // change to sprite 3
+            halfbin.SetActive(false);
+            lowbin.SetActive(true);
+        } else if (quantity == 0){
+            // change to sprite 4
+            lowbin.SetActive(false);
+            emptybin.SetActive(true);
         }
     }
 
+    IEnumerator CookMore(){
+        float duration = 6f; // 6 seconds 
+        float normalizedTime = 0;
+        while (normalizedTime <= duration){
+            normalizedTime += Time.deltaTime;
+            
+            if ((int)normalizedTime == duration / 3){
+                timer.transform.GetChild(0).gameObject.SetActive(false);
+
+            } else if ((int)normalizedTime == duration / 1.5f){
+                timer.transform.GetChild(1).gameObject.SetActive(false);
+
+            }
+            yield return null;
+        }
+        // when equal to duration
+        timer.transform.GetChild(2).gameObject.SetActive(false);
+        //reactivate full sprite
+        emptybin.SetActive(false);
+        fullbin.SetActive(true);
+        //deactivate timer
+        timer.SetActive(false);
+        // reset quantity
+        quantity = 12;
+        cooking = false;
+    }
+
+    public void Boba(){
+        // topping must go on after tea for now
+        if (quantity > 0){
+            if (PlaceTopping()){
+                GamePlay.plate1Topping = 1;
+            }            
+        } else if (!cooking){
+            cooking = true;
+            // replenish; set timer and children to active
+            timer.SetActive(true);
+            foreach (Transform child in timer.transform){
+                child.gameObject.SetActive(true);
+            }
+            StartCoroutine(CookMore());
+        }
+
+    }
+
     public void Jelly(){
-        if (PlaceTopping()){
-            GamePlay.plate1Topping = 2;
+        if (quantity > 0){
+            if (PlaceTopping()){
+                GamePlay.plate1Topping = 2;
+            }            
+        } else if (!cooking){
+            cooking = true;
+            // replenish; set timer and children to active
+            timer.SetActive(true);
+            foreach (Transform child in timer.transform){
+                child.gameObject.SetActive(true);
+            }
+            StartCoroutine(CookMore());
         }
     }
 
     public void Pudding(){
-        if (PlaceTopping()){
-            GamePlay.plate1Topping = 3;
+        if (quantity > 0){
+            if (PlaceTopping()){
+                GamePlay.plate1Topping = 3;
+            }            
+        } else if (!cooking){
+            cooking = true;
+            // replenish; set timer and children to active
+            timer.SetActive(true);
+            foreach (Transform child in timer.transform){
+                child.gameObject.SetActive(true);
+            }
+            StartCoroutine(CookMore());
         }
     }
 
     public void Bean(){
-        if (PlaceTopping()){
-            GamePlay.plate1Topping = 4;
+        if (quantity > 0){
+            if (PlaceTopping()){
+                GamePlay.plate1Topping = 4;
+            }            
+        } else if (!cooking){
+            cooking = true;
+            // replenish; set timer and children to active
+            timer.SetActive(true);
+            foreach (Transform child in timer.transform){
+                child.gameObject.SetActive(true);
+            }
+            StartCoroutine(CookMore());
         }
     }
 
     public void Popping(){
-        if (PlaceTopping()){
-            GamePlay.plate1Topping = 5;
+        if (quantity > 0){
+            if (PlaceTopping()){
+                GamePlay.plate1Topping = 5;
+            }            
+        } else if (!cooking){
+            cooking = true;
+            // replenish; set timer and children to active
+            timer.SetActive(true);
+            foreach (Transform child in timer.transform){
+                child.gameObject.SetActive(true);
+            }
+            StartCoroutine(CookMore());
         }
     }
 

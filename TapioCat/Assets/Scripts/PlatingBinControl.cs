@@ -70,6 +70,7 @@ public class PlatingBinControl : MonoBehaviour
             print(GamePlay.pickedDrink);
             _audioSource.PlayOneShot(pickupSound);
 
+
             // moving picked up object
             if (GamePlay.plate1Temp == 0){      // cold
                 // first move children

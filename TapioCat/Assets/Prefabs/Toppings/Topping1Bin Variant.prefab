@@ -9,7 +9,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5041943807509665596, guid: 986b6b755267948bca01227208a2389b, type: 3}
       propertyPath: m_Name
-      value: Topping1Bin
+      value: Topping1Bin Variant
       objectReference: {fileID: 0}
     - target: {fileID: 5041943807509665596, guid: 986b6b755267948bca01227208a2389b, type: 3}
       propertyPath: m_Layer
@@ -120,9 +120,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c63d999f604f44abdba7782ab2f821a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  topping1: {fileID: 5041943807509665598, guid: 986b6b755267948bca01227208a2389b, type: 3}
-  topping2: {fileID: 4963641740052098545, guid: ddbec6ab124144e908c395852424ef34, type: 3}
-  topping3: {fileID: 8037423634975740470, guid: 71e1792c2279c4e70922f4465ac303d7, type: 3}
-  tea1: {fileID: 3315038149035994025, guid: 44c1b87d2011241718fb5e4c59b6ee9b, type: 3}
-  tea2: {fileID: 735778442290061765, guid: baecb45feea03408ebfa843fb31241ac, type: 3}
-  tea3: {fileID: 48906802363795118, guid: a9f96586fbf664da2a0b674b01566d2a, type: 3}
+  teaCook: {fileID: 0}
+  blendSound: {fileID: 0}
