@@ -83,7 +83,7 @@ public class CustomerOrder : MonoBehaviour
             if (GamePlay.pickedDrink == drinkOrdered){ //if it's the thing we want
                 print("delivering");
                 _audioSource.PlayOneShot(coins);
-
+                timer.SetActive(false);
                 // resetting gameplay vars
                 GamePlay.totalScore++;
                 GamePlay.pickup = false;
