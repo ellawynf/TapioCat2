@@ -12,6 +12,9 @@ TagManager:
   - Hot
   - 4
   - 5
+  - Star1
+  - Star2
+  - Star3
   layers:
   - Default
   - TransparentFX
