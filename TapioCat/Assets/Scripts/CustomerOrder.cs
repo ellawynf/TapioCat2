@@ -36,8 +36,7 @@ public class CustomerOrder : MonoBehaviour
     //public Sprite[] spriteArray;
 
     
-    public float percentServed;
-    public ProgressBarFill progressBar;
+    
 
     // Start is called before the first frame update
     void Start()
@@ -245,8 +244,7 @@ public class CustomerOrder : MonoBehaviour
 
         
 
-        SceneRelatedGlobal.percentServed = float.Parse(SceneRelatedGlobal.servedCustomerNum.ToString())/float.Parse(SceneRelatedGlobal.totalNumCustomer.ToString()) * 100f;
-        progressBar.SetProgress(SceneRelatedGlobal.percentServed);
+        
     
     }
 }

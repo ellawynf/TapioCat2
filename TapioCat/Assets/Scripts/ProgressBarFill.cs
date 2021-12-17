@@ -9,10 +9,18 @@ public class ProgressBarFill : MonoBehaviour
     AudioSource _audioSource;
     public GameObject[] stars;
     public Slider slider;
+
+    
     // Start is called before the first frame update
     void Start()
     {
         _audioSource = GetComponent<AudioSource>();
+    }
+    
+    void Update(){
+        SceneRelatedGlobal.percentServed = float.Parse(SceneRelatedGlobal.servedCustomerNum.ToString())/float.Parse(SceneRelatedGlobal.totalNumCustomer.ToString()) * 100f;
+        
+        SetProgress(SceneRelatedGlobal.percentServed);
     }
     
     public void SetProgress(float progress){
