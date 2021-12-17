@@ -234,6 +234,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4640590876375846155, guid: fb368a3f9f5884d50adcf7d337aa6fc7, type: 3}
   m_PrefabInstance: {fileID: 140605393}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &140605395 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 958095082, guid: fb368a3f9f5884d50adcf7d337aa6fc7, type: 3}
+  m_PrefabInstance: {fileID: 140605393}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a3ac33f8d2324ec89193b60290afbe1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &141578368
 GameObject:
   m_ObjectHideFlags: 0
@@ -5751,7 +5762,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 140605395}
         m_TargetAssemblyTypeName: ToppingBinControl, Assembly-CSharp
         m_MethodName: Boba
         m_Mode: 1
