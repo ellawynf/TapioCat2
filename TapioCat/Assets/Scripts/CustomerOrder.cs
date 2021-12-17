@@ -116,6 +116,7 @@ public class CustomerOrder : MonoBehaviour
 
                 // SceneRelatedGlobal
                 SceneRelatedGlobal.servedCustomerNum++;
+                
 
                 /*timer.SetActive(false);
                 foreach (Transform child in timer.transform){

@@ -20,12 +20,19 @@ public class TouchAndGo : MonoBehaviour {
 	public float queueGrowthTime = 30.0f;
 	public bool waiting = false;
 
+	public int numCustomerLeft;
+	TransitionManager _transitionManager;
+	public AudioClip endingSound;
+    AudioSource _audioSource;
+
 	float previousDistanceToTouchPos, currentDistanceToTouchPos;
 
 	void Start () {
 		rb = GetComponent<Rigidbody2D> ();
 		animator = GetComponent<Animator>();
 		screenWidth = Screen.width;
+		_transitionManager = FindObjectOfType<TransitionManager>();
+		_audioSource = GetComponent<AudioSource>();
 
 		// deactivate cup objects in player's hand at start
 		foreach (Transform child in transform){
@@ -84,6 +91,20 @@ public class TouchAndGo : MonoBehaviour {
 			previousDistanceToTouchPos = (touchPosition - transform.position).magnitude;
 
 		animator.SetFloat("Horizontal", horizontal);
+
+		numCustomerLeft = numCustomerLeft-SceneRelatedGlobal.servedCustomerNum;
+		if(numCustomerLeft==0){
+			if(SceneRelatedGlobal.percentServed <30){
+				_audioSource.PlayOneShot(endingSound);
+				_transitionManager.LoadScene("FailScene");
+			}
+			else{
+				_audioSource.PlayOneShot(endingSound);
+				_transitionManager.LoadScene("LevelTransitionScene");
+			}
+
+			SceneRelatedGlobal.servedCustomerNum = 0;
+		}
 		
 	}
 
