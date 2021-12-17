@@ -14,15 +14,15 @@ public class LevelTransitionScene : MonoBehaviour
         _transitionManager = FindObjectOfType<TransitionManager>();
         _audioSource = GetComponent<AudioSource>();
     }
-    public void ReturnToMainMenu(){
+    public void ReturnToLevelSelect(){
         _audioSource.PlayOneShot(returnSound);
-        _transitionManager.LoadScene("MainMenu");
+        _transitionManager.LoadScene("ChooseLevel");
     }
-
+    /*
     public void NextLevel(){
         _audioSource.PlayOneShot(returnSound);
         _transitionManager.LoadScene("Level"+SceneRelatedGlobal.levelToLoad.ToString());
-    }
+    }*/
 
     // Update is called once per frame
     void Update()

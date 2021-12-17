@@ -65,7 +65,7 @@ public class TransitionManager : MonoBehaviour
 
     public void LoadScene(string sceneName){
         StartCoroutine(FadeAndLoad(sceneName));
-        StartCoroutine(LoadVideo());
+        //StartCoroutine(LoadVideo());
     }
 
     IEnumerator FadeAndLoad(string sceneName){
@@ -76,16 +76,16 @@ public class TransitionManager : MonoBehaviour
         SceneManager.LoadScene(sceneName);
         
     }
-
+    /*
     IEnumerator LoadVideo(){
         fadeImg.gameObject.SetActive(true);
-        Debug.Log("Finished Coroutine at timestamp : " + Time.time);
+        
         videoPlayer.clip = videoClip;
         videoPlayer.Play();
         fadeImg.gameObject.SetActive(false);
         yield return new WaitForSeconds(1);
 
-    }
+    }*/
     
     void OnEnable(){
         SceneManager.sceneLoaded += OnSceneLoaded;
