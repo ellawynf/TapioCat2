@@ -336,6 +336,81 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1001 &2048277756885181552
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 5341778566814523455}
+    m_Modifications:
+    - target: {fileID: 3788703568357192779, guid: 3e983704f70eb496b89ec4be9d506e5a, type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3788703568357192779, guid: 3e983704f70eb496b89ec4be9d506e5a, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.33
+      objectReference: {fileID: 0}
+    - target: {fileID: 3788703568357192779, guid: 3e983704f70eb496b89ec4be9d506e5a, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3788703568357192779, guid: 3e983704f70eb496b89ec4be9d506e5a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3788703568357192779, guid: 3e983704f70eb496b89ec4be9d506e5a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.23
+      objectReference: {fileID: 0}
+    - target: {fileID: 3788703568357192779, guid: 3e983704f70eb496b89ec4be9d506e5a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.927697
+      objectReference: {fileID: 0}
+    - target: {fileID: 3788703568357192779, guid: 3e983704f70eb496b89ec4be9d506e5a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3788703568357192779, guid: 3e983704f70eb496b89ec4be9d506e5a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3788703568357192779, guid: 3e983704f70eb496b89ec4be9d506e5a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3788703568357192779, guid: 3e983704f70eb496b89ec4be9d506e5a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3788703568357192779, guid: 3e983704f70eb496b89ec4be9d506e5a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3788703568357192779, guid: 3e983704f70eb496b89ec4be9d506e5a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3788703568357192779, guid: 3e983704f70eb496b89ec4be9d506e5a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5588488054090359120, guid: 3e983704f70eb496b89ec4be9d506e5a, type: 3}
+      propertyPath: m_Name
+      value: Timer
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 3e983704f70eb496b89ec4be9d506e5a, type: 3}
+--- !u!95 &875898734920373866 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 1174067890951631386, guid: 3e983704f70eb496b89ec4be9d506e5a, type: 3}
+  m_PrefabInstance: {fileID: 2048277756885181552}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &5900486828588811552 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5588488054090359120, guid: 3e983704f70eb496b89ec4be9d506e5a, type: 3}
+  m_PrefabInstance: {fileID: 2048277756885181552}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2714374782459621897
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -345,7 +420,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8037423634975740468, guid: 71e1792c2279c4e70922f4465ac303d7, type: 3}
       propertyPath: m_Name
-      value: Pudding
+      value: PuddingBin
       objectReference: {fileID: 0}
     - target: {fileID: 8037423634975740468, guid: 71e1792c2279c4e70922f4465ac303d7, type: 3}
       propertyPath: m_Layer
@@ -554,7 +629,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a3ac33f8d2324ec89193b60290afbe1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timer: {fileID: 0}
+  timer: {fileID: 5900486828588811552}
   fullbin: {fileID: 4163054516900872126}
   halfbin: {fileID: 5567374520357574638}
   lowbin: {fileID: 2695800619627603516}
@@ -564,6 +639,7 @@ MonoBehaviour:
   iceParentCup: {fileID: 0}
   hotParentCup: {fileID: 0}
   toppingSound: {fileID: 8300000, guid: 4c5c84f112b1b7547884770b1b4a02d7, type: 3}
+  topAnim: {fileID: 875898734920373866}
 --- !u!4 &5341778566814523455 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8037423634975740470, guid: 71e1792c2279c4e70922f4465ac303d7, type: 3}

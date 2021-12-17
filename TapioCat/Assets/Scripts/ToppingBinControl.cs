@@ -40,7 +40,6 @@ public class ToppingBinControl : MonoBehaviour
         lowbin.SetActive(false);
         emptybin.SetActive(false);
 
-        topAnim = GetComponent<Animator>();
     }
 
     // try to get this to work generically
