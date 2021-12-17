@@ -2204,6 +2204,7 @@ GameObject:
   - component: {fileID: 436696148}
   - component: {fileID: 436696147}
   - component: {fileID: 436696149}
+  - component: {fileID: 436696150}
   m_Layer: 0
   m_Name: MatchaCook
   m_TagString: 2
@@ -2240,8 +2241,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timer: {fileID: 585026630}
   timeTilCooked: 6
-  animator: {fileID: 0}
-  blenderTimer: {fileID: 0}
+  animator: {fileID: 436696150}
+  blenderTimer: {fileID: 585026632}
   dingSound: {fileID: 8300000, guid: 53c47adecd3e066408976d66e9fff62e, type: 3}
 --- !u!212 &436696148
 SpriteRenderer:
@@ -2391,6 +2392,26 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!95 &436696150
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 436696145}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 859b13e93587a4b989dcac7c768d8b92, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &458386364
 GameObject:
   m_ObjectHideFlags: 0
@@ -2707,6 +2728,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1698722733}
     m_Modifications:
+    - target: {fileID: 1174067890951631386, guid: 3e983704f70eb496b89ec4be9d506e5a, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 25fcfb77c2df740748869c0be002eabb, type: 2}
     - target: {fileID: 3788703568357192779, guid: 3e983704f70eb496b89ec4be9d506e5a, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -2765,6 +2790,11 @@ GameObject:
 --- !u!4 &585026631 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3788703568357192779, guid: 3e983704f70eb496b89ec4be9d506e5a, type: 3}
+  m_PrefabInstance: {fileID: 585026629}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &585026632 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 1174067890951631386, guid: 3e983704f70eb496b89ec4be9d506e5a, type: 3}
   m_PrefabInstance: {fileID: 585026629}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &597951260
@@ -4040,8 +4070,9 @@ GameObject:
   - component: {fileID: 883313518}
   - component: {fileID: 883313520}
   - component: {fileID: 883313521}
+  - component: {fileID: 883313522}
   m_Layer: 0
-  m_Name: BlackCook
+  m_Name: BSugarCook
   m_TagString: 4
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4128,8 +4159,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timer: {fileID: 585026630}
   timeTilCooked: 6
-  animator: {fileID: 0}
-  blenderTimer: {fileID: 0}
+  animator: {fileID: 883313522}
+  blenderTimer: {fileID: 585026632}
   dingSound: {fileID: 8300000, guid: 53c47adecd3e066408976d66e9fff62e, type: 3}
 --- !u!82 &883313521
 AudioSource:
@@ -4227,6 +4258,26 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!95 &883313522
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 883313517}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 7d45bec90d5914331ab06d2fba1478d7, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &915967504
 GameObject:
   m_ObjectHideFlags: 0
@@ -5384,6 +5435,7 @@ GameObject:
   - component: {fileID: 1122531428}
   - component: {fileID: 1122531427}
   - component: {fileID: 1122531429}
+  - component: {fileID: 1122531430}
   m_Layer: 0
   m_Name: TaroCook
   m_TagString: 1
@@ -5420,8 +5472,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timer: {fileID: 585026630}
   timeTilCooked: 6
-  animator: {fileID: 0}
-  blenderTimer: {fileID: 0}
+  animator: {fileID: 1122531430}
+  blenderTimer: {fileID: 585026632}
   dingSound: {fileID: 8300000, guid: 53c47adecd3e066408976d66e9fff62e, type: 3}
 --- !u!212 &1122531428
 SpriteRenderer:
@@ -5571,6 +5623,26 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!95 &1122531430
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1122531425}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c26616a6e34dc4c0a97658283cf1a229, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1126697156
 GameObject:
   m_ObjectHideFlags: 0
@@ -8024,6 +8096,7 @@ GameObject:
   - component: {fileID: 1559194654}
   - component: {fileID: 1559194653}
   - component: {fileID: 1559194656}
+  - component: {fileID: 1559194657}
   m_Layer: 0
   m_Name: ThaiCook
   m_TagString: 3
@@ -8045,8 +8118,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timer: {fileID: 585026630}
   timeTilCooked: 6
-  animator: {fileID: 0}
-  blenderTimer: {fileID: 0}
+  animator: {fileID: 1559194657}
+  blenderTimer: {fileID: 585026632}
   dingSound: {fileID: 8300000, guid: 53c47adecd3e066408976d66e9fff62e, type: 3}
 --- !u!212 &1559194654
 SpriteRenderer:
@@ -8211,6 +8284,26 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!95 &1559194657
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1559194652}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: cbdcd0561bf494e64a8a38f4d74d5647, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1565109604
 GameObject:
   m_ObjectHideFlags: 0
@@ -8913,6 +9006,7 @@ GameObject:
   - component: {fileID: 1743093736}
   - component: {fileID: 1743093737}
   - component: {fileID: 1743093738}
+  - component: {fileID: 1743093739}
   m_Layer: 0
   m_Name: StrawberryCook
   m_TagString: 5
@@ -9002,7 +9096,7 @@ MonoBehaviour:
   timer: {fileID: 585026630}
   timeTilCooked: 6
   animator: {fileID: 0}
-  blenderTimer: {fileID: 0}
+  blenderTimer: {fileID: 585026632}
   dingSound: {fileID: 8300000, guid: 53c47adecd3e066408976d66e9fff62e, type: 3}
 --- !u!82 &1743093738
 AudioSource:
@@ -9100,6 +9194,26 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!95 &1743093739
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1743093734}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 047215bce4c1d4f51800682ab7fc0ec4, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &1878295236
 PrefabInstance:
   m_ObjectHideFlags: 0

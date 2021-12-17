@@ -3726,7 +3726,7 @@ MonoBehaviour:
   timer: {fileID: 1082275446}
   timeTilCooked: 6
   animator: {fileID: 1157156928}
-  blenderTimer: {fileID: 0}
+  blenderTimer: {fileID: 1661249997}
   dingSound: {fileID: 8300000, guid: 53c47adecd3e066408976d66e9fff62e, type: 3}
 --- !u!212 &1157156926
 SpriteRenderer:
@@ -5942,6 +5942,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1146381666}
     m_Modifications:
+    - target: {fileID: 1174067890951631386, guid: 3e983704f70eb496b89ec4be9d506e5a, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 25fcfb77c2df740748869c0be002eabb, type: 2}
     - target: {fileID: 3788703568357192779, guid: 3e983704f70eb496b89ec4be9d506e5a, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -5992,6 +5996,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3e983704f70eb496b89ec4be9d506e5a, type: 3}
+--- !u!95 &1661249997 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 1174067890951631386, guid: 3e983704f70eb496b89ec4be9d506e5a, type: 3}
+  m_PrefabInstance: {fileID: 1661249996}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1752517607
 GameObject:
   m_ObjectHideFlags: 0
