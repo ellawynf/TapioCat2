@@ -13,4 +13,5 @@ public static class SceneRelatedGlobal{
     public static float percentServed=0;
     public static int levelToLoad = 1;
     public static int totalNumCustomer=0;
+    public static int numCustomerLeft=0;
 }

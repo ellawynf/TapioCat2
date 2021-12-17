@@ -116,6 +116,7 @@ public class CustomerOrder : MonoBehaviour
 
                 // SceneRelatedGlobal
                 SceneRelatedGlobal.servedCustomerNum++;
+                SceneRelatedGlobal.numCustomerLeft--;
                 
 
                 /*timer.SetActive(false);
@@ -239,7 +240,7 @@ public class CustomerOrder : MonoBehaviour
                 atCounter = false;
                 playAngry = false;
                 timeWaited = 0;
-                SceneRelatedGlobal.angryCustomerNum++;
+                SceneRelatedGlobal.numCustomerLeft--;
                 print("LEFT");
             }
         }

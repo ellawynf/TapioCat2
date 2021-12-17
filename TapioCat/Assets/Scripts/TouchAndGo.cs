@@ -20,7 +20,7 @@ public class TouchAndGo : MonoBehaviour {
 	public float queueGrowthTime = 30.0f;
 	public bool waiting = false;
 
-	public int numCustomerLeft;
+	
 	TransitionManager _transitionManager;
 	public AudioClip endingSound;
     AudioSource _audioSource;
@@ -33,7 +33,7 @@ public class TouchAndGo : MonoBehaviour {
 		screenWidth = Screen.width;
 		_transitionManager = FindObjectOfType<TransitionManager>();
 		_audioSource = GetComponent<AudioSource>();
-
+		SceneRelatedGlobal.numCustomerLeft = SceneRelatedGlobal.totalNumCustomer;
 		// deactivate cup objects in player's hand at start
 		foreach (Transform child in transform){
 			child.gameObject.SetActive(false);
@@ -92,8 +92,8 @@ public class TouchAndGo : MonoBehaviour {
 
 		animator.SetFloat("Horizontal", horizontal);
 
-		numCustomerLeft = numCustomerLeft-SceneRelatedGlobal.servedCustomerNum-SceneRelatedGlobal.angryCustomerNum;
-		if(numCustomerLeft==0){
+		
+		if(SceneRelatedGlobal.numCustomerLeft==0){
 			if(SceneRelatedGlobal.percentServed <30){
 				_audioSource.PlayOneShot(endingSound);
 				_transitionManager.LoadScene("FailScene");
