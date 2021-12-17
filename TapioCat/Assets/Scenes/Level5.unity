@@ -421,7 +421,7 @@ PrefabInstance:
     - target: {fileID: 8411780980301994166, guid: 2a6678f569ff54a9f8fcb70b91dcbdd8, type: 3}
       propertyPath: timer
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 125358310}
     - target: {fileID: 8411780980301994166, guid: 2a6678f569ff54a9f8fcb70b91dcbdd8, type: 3}
       propertyPath: hotParentCup
       value: 
@@ -452,6 +452,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a3ac33f8d2324ec89193b60290afbe1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &125358310 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5318927332813317680, guid: 2a6678f569ff54a9f8fcb70b91dcbdd8, type: 3}
+  m_PrefabInstance: {fileID: 125358307}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &129030412
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2866,7 +2871,7 @@ PrefabInstance:
     - target: {fileID: 435477539, guid: ee944ab33127b4fb8954337c94679277, type: 3}
       propertyPath: timer
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 597951263}
     - target: {fileID: 435477539, guid: ee944ab33127b4fb8954337c94679277, type: 3}
       propertyPath: hotParentCup
       value: 
@@ -2945,6 +2950,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a3ac33f8d2324ec89193b60290afbe1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &597951263 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5900486828588811552, guid: ee944ab33127b4fb8954337c94679277, type: 3}
+  m_PrefabInstance: {fileID: 597951260}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &631360280
 GameObject:
   m_ObjectHideFlags: 0
@@ -3249,7 +3259,7 @@ PrefabInstance:
     - target: {fileID: 796890767, guid: b53e026f1f85344b999f3791bfd47596, type: 3}
       propertyPath: timer
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 647874933}
     - target: {fileID: 796890767, guid: b53e026f1f85344b999f3791bfd47596, type: 3}
       propertyPath: hotParentCup
       value: 
@@ -3328,6 +3338,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a3ac33f8d2324ec89193b60290afbe1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &647874933 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5841831004839607255, guid: b53e026f1f85344b999f3791bfd47596, type: 3}
+  m_PrefabInstance: {fileID: 647874930}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &672786727
 GameObject:
   m_ObjectHideFlags: 0
@@ -4862,7 +4877,7 @@ PrefabInstance:
     - target: {fileID: 958095082, guid: fb368a3f9f5884d50adcf7d337aa6fc7, type: 3}
       propertyPath: timer
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1025182518}
     - target: {fileID: 958095082, guid: fb368a3f9f5884d50adcf7d337aa6fc7, type: 3}
       propertyPath: hotParentCup
       value: 
@@ -4941,6 +4956,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a3ac33f8d2324ec89193b60290afbe1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1025182518 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1830075315684707708, guid: fb368a3f9f5884d50adcf7d337aa6fc7, type: 3}
+  m_PrefabInstance: {fileID: 1025182515}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1032113840
 GameObject:
   m_ObjectHideFlags: 0
@@ -10998,7 +11018,7 @@ PrefabInstance:
     - target: {fileID: 6187887492358074895, guid: 77b89640c45f94b188f5122a422bfdf1, type: 3}
       propertyPath: timer
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 6187887493580686197}
     - target: {fileID: 6187887492358074895, guid: 77b89640c45f94b188f5122a422bfdf1, type: 3}
       propertyPath: hotParentCup
       value: 
@@ -11013,3 +11033,8 @@ PrefabInstance:
       objectReference: {fileID: 1177400210}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 77b89640c45f94b188f5122a422bfdf1, type: 3}
+--- !u!1 &6187887493580686197 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5822244531256882622, guid: 77b89640c45f94b188f5122a422bfdf1, type: 3}
+  m_PrefabInstance: {fileID: 6187887493580686196}
+  m_PrefabAsset: {fileID: 0}

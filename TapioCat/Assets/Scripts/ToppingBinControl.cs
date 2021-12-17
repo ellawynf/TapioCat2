@@ -119,9 +119,9 @@ public class ToppingBinControl : MonoBehaviour
             cooking = true;
             // replenish; set timer and children to active
             timer.SetActive(true);
-            foreach (Transform child in timer.transform){
+            /*foreach (Transform child in timer.transform){
                 child.gameObject.SetActive(true);
-            }
+            }*/
             StartCoroutine(CookMore());
         }
 
@@ -136,9 +136,9 @@ public class ToppingBinControl : MonoBehaviour
             cooking = true;
             // replenish; set timer and children to active
             timer.SetActive(true);
-            foreach (Transform child in timer.transform){
+            /*foreach (Transform child in timer.transform){
                 child.gameObject.SetActive(true);
-            }
+            }*/
             StartCoroutine(CookMore());
         }
     }
@@ -152,9 +152,9 @@ public class ToppingBinControl : MonoBehaviour
             cooking = true;
             // replenish; set timer and children to active
             timer.SetActive(true);
-            foreach (Transform child in timer.transform){
+            /*foreach (Transform child in timer.transform){
                 child.gameObject.SetActive(true);
-            }
+            }*/
             StartCoroutine(CookMore());
         }
     }
@@ -168,9 +168,9 @@ public class ToppingBinControl : MonoBehaviour
             cooking = true;
             // replenish; set timer and children to active
             timer.SetActive(true);
-            foreach (Transform child in timer.transform){
+            /*foreach (Transform child in timer.transform){
                 child.gameObject.SetActive(true);
-            }
+            }*/
             StartCoroutine(CookMore());
         }
     }
@@ -184,9 +184,9 @@ public class ToppingBinControl : MonoBehaviour
             cooking = true;
             // replenish; set timer and children to active
             timer.SetActive(true);
-            foreach (Transform child in timer.transform){
+            /*foreach (Transform child in timer.transform){
                 child.gameObject.SetActive(true);
-            }
+            }*/
             StartCoroutine(CookMore());
         }
     }

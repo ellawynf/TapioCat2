@@ -164,10 +164,6 @@ PrefabInstance:
     m_TransformParent: {fileID: 1492353001}
     m_Modifications:
     - target: {fileID: 958095082, guid: fb368a3f9f5884d50adcf7d337aa6fc7, type: 3}
-      propertyPath: timer
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 958095082, guid: fb368a3f9f5884d50adcf7d337aa6fc7, type: 3}
       propertyPath: hotParentCup
       value: 
       objectReference: {fileID: 1549721241}

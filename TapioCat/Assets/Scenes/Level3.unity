@@ -8376,7 +8376,7 @@ PrefabInstance:
     - target: {fileID: 796890767, guid: b53e026f1f85344b999f3791bfd47596, type: 3}
       propertyPath: timer
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1835647418068561190}
     - target: {fileID: 796890767, guid: b53e026f1f85344b999f3791bfd47596, type: 3}
       propertyPath: hotParentCup
       value: 
@@ -8439,6 +8439,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b53e026f1f85344b999f3791bfd47596, type: 3}
+--- !u!1 &1835647418068561190 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5841831004839607255, guid: b53e026f1f85344b999f3791bfd47596, type: 3}
+  m_PrefabInstance: {fileID: 1835647418068561189}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &4572590292304459557
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9091,7 +9096,7 @@ PrefabInstance:
     - target: {fileID: 435477539, guid: ee944ab33127b4fb8954337c94679277, type: 3}
       propertyPath: timer
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 6762443844861738817}
     - target: {fileID: 435477539, guid: ee944ab33127b4fb8954337c94679277, type: 3}
       propertyPath: hotParentCup
       value: 
@@ -9154,6 +9159,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ee944ab33127b4fb8954337c94679277, type: 3}
+--- !u!1 &6762443844861738817 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5900486828588811552, guid: ee944ab33127b4fb8954337c94679277, type: 3}
+  m_PrefabInstance: {fileID: 6762443844861738816}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7861963059607922574
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9164,7 +9174,7 @@ PrefabInstance:
     - target: {fileID: 958095082, guid: fb368a3f9f5884d50adcf7d337aa6fc7, type: 3}
       propertyPath: timer
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 7861963059607922575}
     - target: {fileID: 958095082, guid: fb368a3f9f5884d50adcf7d337aa6fc7, type: 3}
       propertyPath: hotParentCup
       value: 
@@ -9227,6 +9237,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fb368a3f9f5884d50adcf7d337aa6fc7, type: 3}
+--- !u!1 &7861963059607922575 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1830075315684707708, guid: fb368a3f9f5884d50adcf7d337aa6fc7, type: 3}
+  m_PrefabInstance: {fileID: 7861963059607922574}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &7979852776484279565 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3278054757423002722, guid: ed45fb7e6ea2a4e3db60baf3f91a4bc6, type: 3}

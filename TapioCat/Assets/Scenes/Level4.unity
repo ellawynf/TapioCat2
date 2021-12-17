@@ -3245,7 +3245,7 @@ PrefabInstance:
     - target: {fileID: 958095082, guid: fb368a3f9f5884d50adcf7d337aa6fc7, type: 3}
       propertyPath: timer
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 850568281}
     - target: {fileID: 958095082, guid: fb368a3f9f5884d50adcf7d337aa6fc7, type: 3}
       propertyPath: hotParentCup
       value: 
@@ -3324,6 +3324,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a3ac33f8d2324ec89193b60290afbe1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &850568281 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1830075315684707708, guid: fb368a3f9f5884d50adcf7d337aa6fc7, type: 3}
+  m_PrefabInstance: {fileID: 850568278}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &879840323
 GameObject:
   m_ObjectHideFlags: 0
@@ -5499,7 +5504,7 @@ PrefabInstance:
     - target: {fileID: 796890767, guid: b53e026f1f85344b999f3791bfd47596, type: 3}
       propertyPath: timer
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1217335137}
     - target: {fileID: 796890767, guid: b53e026f1f85344b999f3791bfd47596, type: 3}
       propertyPath: hotParentCup
       value: 
@@ -5578,6 +5583,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a3ac33f8d2324ec89193b60290afbe1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1217335137 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5841831004839607255, guid: b53e026f1f85344b999f3791bfd47596, type: 3}
+  m_PrefabInstance: {fileID: 1217335134}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1242108288 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2170378353937880281, guid: 55c136c4534214a458c940e8c7fd66e1, type: 3}
@@ -8864,7 +8874,7 @@ PrefabInstance:
     - target: {fileID: 435477539, guid: ee944ab33127b4fb8954337c94679277, type: 3}
       propertyPath: timer
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1945755910}
     - target: {fileID: 435477539, guid: ee944ab33127b4fb8954337c94679277, type: 3}
       propertyPath: hotParentCup
       value: 
@@ -8943,6 +8953,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a3ac33f8d2324ec89193b60290afbe1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1945755910 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5900486828588811552, guid: ee944ab33127b4fb8954337c94679277, type: 3}
+  m_PrefabInstance: {fileID: 1945755907}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1988105929
 GameObject:
   m_ObjectHideFlags: 0
@@ -10124,7 +10139,7 @@ PrefabInstance:
     - target: {fileID: 8411780980301994166, guid: 2a6678f569ff54a9f8fcb70b91dcbdd8, type: 3}
       propertyPath: timer
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 8411780980559405287}
     - target: {fileID: 8411780980301994166, guid: 2a6678f569ff54a9f8fcb70b91dcbdd8, type: 3}
       propertyPath: hotParentCup
       value: 
@@ -10139,3 +10154,8 @@ PrefabInstance:
       objectReference: {fileID: 1804839525}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2a6678f569ff54a9f8fcb70b91dcbdd8, type: 3}
+--- !u!1 &8411780980559405287 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5318927332813317680, guid: 2a6678f569ff54a9f8fcb70b91dcbdd8, type: 3}
+  m_PrefabInstance: {fileID: 8411780980559405286}
+  m_PrefabAsset: {fileID: 0}
