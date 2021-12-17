@@ -16,7 +16,7 @@ public class LevelTransitionScene : MonoBehaviour
     }
     public void ReturnToLevelSelect(){
         _audioSource.PlayOneShot(returnSound);
-        _transitionManager.LoadScene("ChooseLevel");
+        _transitionManager.LoadScene("ChooseLevels");
     }
     /*
     public void NextLevel(){
