@@ -23,7 +23,6 @@ public class CookTea : MonoBehaviour
 
     void Start () {
 		animator = GetComponent<Animator>();
-        blenderTimer = GetComponent<Animator>();
         _audioSource = GetComponent<AudioSource>();
     }
     private void OnEnable() {

@@ -30,6 +30,7 @@ public class ToppingBinControl : MonoBehaviour
 
     private int quantity = 12;
 
+    public Animator topAnim;
     //public Transform hotToppingSP;
     void Start(){
         _audioSource = GetComponent<AudioSource>();
@@ -38,6 +39,8 @@ public class ToppingBinControl : MonoBehaviour
         halfbin.SetActive(false);
         lowbin.SetActive(false);
         emptybin.SetActive(false);
+
+        topAnim = GetComponent<Animator>();
     }
 
     // try to get this to work generically
@@ -81,22 +84,26 @@ public class ToppingBinControl : MonoBehaviour
         float normalizedTime = 0;
         while (normalizedTime <= duration){
             normalizedTime += Time.deltaTime;
-            
-            if ((int)normalizedTime == duration / 3){
+
+            topAnim.SetBool("Blending", true);
+            /*if ((int)normalizedTime == duration / 3){
+                
                 timer.transform.GetChild(0).gameObject.SetActive(false);
 
             } else if ((int)normalizedTime == duration / 1.5f){
                 timer.transform.GetChild(1).gameObject.SetActive(false);
 
-            }
+            }*/
             yield return null;
         }
         // when equal to duration
-        timer.transform.GetChild(2).gameObject.SetActive(false);
+        topAnim.SetBool("Blending", false);
+        //timer.transform.GetChild(2).gameObject.SetActive(false);
         //reactivate full sprite
         emptybin.SetActive(false);
         fullbin.SetActive(true);
         //deactivate timer
+        
         timer.SetActive(false);
         // reset quantity
         quantity = 12;
