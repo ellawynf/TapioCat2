@@ -60,7 +60,7 @@ public class StarsScript : MonoBehaviour
         else if(percentCollected >= 60 && percentCollected < 90){
             StartCoroutine(ShowTwoStar());
         }
-        else {
+        else if(percentCollected >= 90){
             
             StartCoroutine(ShowThreeStar());
             

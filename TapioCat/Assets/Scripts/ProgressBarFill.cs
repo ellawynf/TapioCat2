@@ -5,8 +5,7 @@ using UnityEngine.UI;
 
 public class ProgressBarFill : MonoBehaviour
 {
-    public AudioClip StarSound;
-    AudioSource _audioSource;
+    
     public GameObject[] stars;
     public Slider slider;
 
@@ -14,7 +13,7 @@ public class ProgressBarFill : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        _audioSource = GetComponent<AudioSource>();
+        
     }
     
     void Update(){
@@ -24,36 +23,21 @@ public class ProgressBarFill : MonoBehaviour
     }
     
     public void SetProgress(float progress){
-        IEnumerator ShowTwoStar(){
-            stars[0].SetActive(true);
-            _audioSource.PlayOneShot(StarSound);
-            yield return new WaitForSeconds(1);
-            stars[1].SetActive(true);
-            _audioSource.PlayOneShot(StarSound);
-        }
-
-        IEnumerator ShowThreeStar(){
-            stars[0].SetActive(true);
-            _audioSource.PlayOneShot(StarSound);
-            yield return new WaitForSeconds(1);
-            stars[1].SetActive(true);
-            _audioSource.PlayOneShot(StarSound);
-            yield return new WaitForSeconds(1);
-            stars[2].SetActive(true);
-            _audioSource.PlayOneShot(StarSound);
-        }
+        
         slider.value = progress;
         if(SceneRelatedGlobal.percentServed >= 30 && SceneRelatedGlobal.percentServed  <60){
             
             stars[0].SetActive(true);
-            _audioSource.PlayOneShot(StarSound);
+            
         }
         else if(SceneRelatedGlobal.percentServed  >= 60 && SceneRelatedGlobal.percentServed  < 90){
-            StartCoroutine(ShowTwoStar());
-        }
-        else {
+            stars[1].SetActive(true);
             
-            StartCoroutine(ShowThreeStar());
+        }
+        else if(SceneRelatedGlobal.percentServed  >= 90){
+            
+            stars[2].SetActive(true);
+            
             
         }
     }
