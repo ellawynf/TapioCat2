@@ -11,6 +11,9 @@ AnimatorStateTransition:
   - m_ConditionMode: 6
     m_ConditionEvent: Time
     m_EventTreshold: 2
+  - m_ConditionMode: 1
+    m_ConditionEvent: Waiting
+    m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 9131206904848024307}
   m_Solo: 0
@@ -36,6 +39,9 @@ AnimatorStateTransition:
   - m_ConditionMode: 6
     m_ConditionEvent: Time
     m_EventTreshold: 1
+  - m_ConditionMode: 1
+    m_ConditionEvent: Waiting
+    m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 3648447737441295568}
   m_Solo: 0
@@ -87,6 +93,9 @@ AnimatorStateTransition:
   - m_ConditionMode: 6
     m_ConditionEvent: Time
     m_EventTreshold: 3
+  - m_ConditionMode: 1
+    m_ConditionEvent: Waiting
+    m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 2445426735507276582}
   m_Solo: 0
@@ -139,6 +148,9 @@ AnimatorStateTransition:
   - m_ConditionMode: 6
     m_ConditionEvent: Time
     m_EventTreshold: 6
+  - m_ConditionMode: 1
+    m_ConditionEvent: Waiting
+    m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -5699540879872414867}
   m_Solo: 0
@@ -168,6 +180,12 @@ AnimatorController:
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 0}
+  - m_Name: Waiting
+    m_Type: 4
+    m_DefaultFloat: 0
+    m_DefaultInt: 0
+    m_DefaultBool: 0
+    m_Controller: {fileID: 0}
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer
@@ -192,6 +210,9 @@ AnimatorStateTransition:
   - m_ConditionMode: 6
     m_ConditionEvent: Time
     m_EventTreshold: 4
+  - m_ConditionMode: 1
+    m_ConditionEvent: Waiting
+    m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1757965342925923697}
   m_Solo: 0
@@ -365,6 +386,9 @@ AnimatorStateTransition:
   - m_ConditionMode: 6
     m_ConditionEvent: Time
     m_EventTreshold: 5
+  - m_ConditionMode: 1
+    m_ConditionEvent: Waiting
+    m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 2824848177536717436}
   m_Solo: 0

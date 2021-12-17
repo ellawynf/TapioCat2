@@ -22,7 +22,8 @@ public class CustomerOrder : MonoBehaviour
     //timer variables
     float timeWaited;
     public int leavingTime = 50;
-    //public GameObject timer;
+    public GameObject timer;
+    public Animator timerAnim;
     //audio
     public AudioClip doorbell;
     public AudioClip coins;
@@ -31,8 +32,8 @@ public class CustomerOrder : MonoBehaviour
     public AudioClip leaveSound;
     AudioSource _audioSource;
     private GameObject player;
-    public SpriteRenderer spriteRenderer;
-    public Sprite[] spriteArray;
+    //public SpriteRenderer spriteRenderer;
+    //public Sprite[] spriteArray;
 
     
     public float percentServed;
@@ -47,7 +48,7 @@ public class CustomerOrder : MonoBehaviour
         player = GameObject.FindWithTag("Player");
 
         //setup timer
-        //timer.SetActive(false);
+        timer.SetActive(false);
 
         //set all cup variables to no
         //temp[0].SetActive(false);
@@ -150,37 +151,13 @@ public class CustomerOrder : MonoBehaviour
             }
         }
     }*/
-    void ChangeSprite1() 
-    { 
-        spriteRenderer.sprite = spriteArray[0]; 
-    }
-    void ChangeSprite2() 
-    { 
-        spriteRenderer.sprite = spriteArray[1]; 
-    }
-    void ChangeSprite3() 
-    { 
-        spriteRenderer.sprite = spriteArray[2]; 
-    }
-    void ChangeSprite4() 
-    { 
-        spriteRenderer.sprite = spriteArray[3]; 
-    }
-    void ChangeSprite5() 
-    { 
-        spriteRenderer.sprite = spriteArray[4]; 
-    }
-    void ChangeSprite6() 
-    { 
-        spriteRenderer.sprite = spriteArray[5]; 
-    }
     void Update(){
         //check if there's an "empty" space and if there's a customer in the queue
         //if yes then set to active
         if (atCounter == false && GamePlay.customerQueue > 0){
             GamePlay.customerQueue--;
             atCounter = true;
-            //timer.SetActive(true);
+            timer.SetActive(true);
             /*foreach (Transform child in timer.transform){
                 child.gameObject.SetActive(true);
             }*/
@@ -201,21 +178,31 @@ public class CustomerOrder : MonoBehaviour
         if (atCounter == true){
             timeWaited += Time.deltaTime;
             print(timeWaited);
-            //timer.SetActive(true);
+            timer.SetActive(true);
+            timerAnim.SetInteger("Time", 0);
+            timerAnim.SetBool("Waiting", false);
             if ((int) timeWaited == (leavingTime / 6)){       // 1/6 of the way done
-                ChangeSprite1();
+                timerAnim.SetInteger("Time", 1);
+                timerAnim.SetBool("Waiting", true);
+                //ChangeSprite1();
             }
             if ((int) timeWaited == (leavingTime / 3)){       // 1/3 of the way done
-                ChangeSprite2();
+                timerAnim.SetInteger("Time", 2);
+                timerAnim.SetBool("Waiting", true);
+                //ChangeSprite2();
                 /*Transform this_seg = timer.transform.GetChild(0);
                 this_seg.gameObject.SetActive(false);
                 print("1/3");*/
             }
             if ((int) timeWaited == (leavingTime / 2)){       // 1/2 of the way done
-                ChangeSprite3();
+                timerAnim.SetInteger("Time", 3);
+                timerAnim.SetBool("Waiting", true);
+                //ChangeSprite3();
             }
             if ((int) timeWaited == ((leavingTime*2) / 3)){     // 2/3 of the way done
-                ChangeSprite4();
+                timerAnim.SetInteger("Time", 4);
+                timerAnim.SetBool("Waiting", true);
+                //ChangeSprite4();
                 /*Transform this_seg = timer.transform.GetChild(1);
                 this_seg.gameObject.SetActive(false);*/
                 if(playAngry == false){
@@ -224,11 +211,19 @@ public class CustomerOrder : MonoBehaviour
                 }
                 print("2/3");             
             }
-            if ((int) timeWaited == (leavingTime / 1.2f)){       // 5/6 of the way done
-                ChangeSprite5();
-            }
+            if ((int) timeWaited == (40)){       // 5/6 of the way done
+                timerAnim.SetInteger("Time", 5);
+                timerAnim.SetBool("Waiting", true);
+                //ChangeSprite5();
+            } 
+            if ((int) timeWaited == (48)){       // 5/6 of the way done
+                timerAnim.SetInteger("Time", 6);
+                timerAnim.SetBool("Waiting", true);
+                //ChangeSprite5();
+            } 
             if ((int) timeWaited == leavingTime){
-                ChangeSprite6();
+                timer.SetActive(false);
+                //ChangeSprite6();
                 /*Transform this_seg = timer.transform.GetChild(2);       // done, deactivating
                 this_seg.gameObject.SetActive(false);*/
                 _audioSource.PlayOneShot(leaveSound);
@@ -247,6 +242,8 @@ public class CustomerOrder : MonoBehaviour
                 print("LEFT");
             }
         }
+
+        
 
         SceneRelatedGlobal.percentServed = float.Parse(SceneRelatedGlobal.servedCustomerNum.ToString())/float.Parse(SceneRelatedGlobal.totalNumCustomer.ToString()) * 100f;
         progressBar.SetProgress(SceneRelatedGlobal.percentServed);
