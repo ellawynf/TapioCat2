@@ -95,11 +95,11 @@ public class TouchAndGo : MonoBehaviour {
 		
 		if(SceneRelatedGlobal.numCustomerLeft==0){
 			if(SceneRelatedGlobal.percentServed <30){
-				_audioSource.PlayOneShot(endingSound);
+				//_audioSource.PlayOneShot(endingSound);
 				_transitionManager.LoadScene("FailScene");
 			}
 			else{
-				_audioSource.PlayOneShot(endingSound);
+				//_audioSource.PlayOneShot(endingSound);
 				_transitionManager.LoadScene("LevelTransitionScene");
 			}
 
