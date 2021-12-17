@@ -103,13 +103,14 @@ public class TouchAndGo : MonoBehaviour {
 				_transitionManager.LoadScene("LevelTransitionScene");
 			}
 
-			
+			SceneRelatedGlobal.servedCustomerNum = 0;
+			SceneRelatedGlobal.angryCustomerNum = 0;
 		}
 		
 	}
 
 	IEnumerator addCustomer(float time) {
-		if (waiting == true || GamePlay.customerTotal >= 6){ // if we already know we are waiting to add someone or we have hit the customer limit
+		if (waiting == true || GamePlay.customerTotal >= 50){ // if we already know we are waiting to add someone or we have hit the customer limit
 			yield break;
 		}
 		waiting = true; //know we are waiting
