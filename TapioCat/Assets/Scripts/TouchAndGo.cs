@@ -92,7 +92,7 @@ public class TouchAndGo : MonoBehaviour {
 
 		animator.SetFloat("Horizontal", horizontal);
 
-		numCustomerLeft = numCustomerLeft-SceneRelatedGlobal.servedCustomerNum;
+		numCustomerLeft = numCustomerLeft-SceneRelatedGlobal.servedCustomerNum-SceneRelatedGlobal.angryCustomerNum;
 		if(numCustomerLeft==0){
 			if(SceneRelatedGlobal.percentServed <30){
 				_audioSource.PlayOneShot(endingSound);
@@ -104,6 +104,7 @@ public class TouchAndGo : MonoBehaviour {
 			}
 
 			SceneRelatedGlobal.servedCustomerNum = 0;
+			SceneRelatedGlobal.angryCustomerNum = 0;
 		}
 		
 	}

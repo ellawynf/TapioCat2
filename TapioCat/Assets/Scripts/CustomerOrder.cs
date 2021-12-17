@@ -239,6 +239,7 @@ public class CustomerOrder : MonoBehaviour
                 atCounter = false;
                 playAngry = false;
                 timeWaited = 0;
+                SceneRelatedGlobal.angryCustomerNum++;
                 print("LEFT");
             }
         }
