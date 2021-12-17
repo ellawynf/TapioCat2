@@ -555,10 +555,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timer: {fileID: 0}
-  fullbin: {fileID: 0}
-  halfbin: {fileID: 0}
-  lowbin: {fileID: 0}
-  emptybin: {fileID: 0}
+  fullbin: {fileID: 2951877665463639353}
+  halfbin: {fileID: 3416328921975141081}
+  lowbin: {fileID: 533288966086542948}
+  emptybin: {fileID: 6504608776237750064}
   toppingPlating: {fileID: 3960021680766803493, guid: b9b99ac3ff24c4d929f2e08fb93bea46, type: 3}
   toppingPlateSP: {fileID: 0}
   iceParentCup: {fileID: 0}

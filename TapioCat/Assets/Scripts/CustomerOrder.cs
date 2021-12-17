@@ -109,6 +109,9 @@ public class CustomerOrder : MonoBehaviour
                 atCounter = false;
                 playAngry = false;
                 timeWaited = 0;
+
+                // SceneRelatedGlobal
+                SceneRelatedGlobal.servedCustomerNum++;
                 /*timer.SetActive(false);
                 foreach (Transform child in timer.transform){
                     child.gameObject.SetActive(false);

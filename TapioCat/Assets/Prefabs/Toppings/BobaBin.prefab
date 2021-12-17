@@ -559,10 +559,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timer: {fileID: 0}
-  fullbin: {fileID: 0}
-  halfbin: {fileID: 0}
-  lowbin: {fileID: 0}
-  emptybin: {fileID: 0}
+  fullbin: {fileID: 1803435643740944368}
+  halfbin: {fileID: 7603255994883728106}
+  lowbin: {fileID: 4776814902867411445}
+  emptybin: {fileID: 9160660145004085405}
   toppingPlating: {fileID: 6547880435861963145, guid: 84001bdd02937447cb94c1a439c487e6, type: 3}
   toppingPlateSP: {fileID: 0}
   iceParentCup: {fileID: 0}
