@@ -34,7 +34,7 @@ public class CustomerOrder : MonoBehaviour
     public SpriteRenderer spriteRenderer;
     public Sprite[] spriteArray;
 
-    public int totalNumCustomer;
+    
     public float percentServed;
     public ProgressBarFill progressBar;
 
@@ -74,7 +74,7 @@ public class CustomerOrder : MonoBehaviour
         teaTypes[tea-1].SetActive(true);
         toppingTypes[topping-1].SetActive(true);*/
         drinkOrdered = ice.ToString()+tea.ToString()+topping.ToString();
-        totalNumCustomer = SceneRelatedGlobal.totalNumCustomer;
+        
     }
 
     public void Deliver(){
@@ -247,5 +247,9 @@ public class CustomerOrder : MonoBehaviour
                 print("LEFT");
             }
         }
+
+        SceneRelatedGlobal.percentServed = float.Parse(SceneRelatedGlobal.servedCustomerNum.ToString())/float.Parse(SceneRelatedGlobal.totalNumCustomer.ToString()) * 100f;
+        progressBar.SetProgress(SceneRelatedGlobal.percentServed);
+    
     }
 }

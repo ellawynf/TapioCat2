@@ -5,9 +5,48 @@ using UnityEngine.UI;
 
 public class ProgressBarFill : MonoBehaviour
 {
+    public AudioClip StarSound;
+    AudioSource _audioSource;
+    public GameObject[] stars;
     public Slider slider;
     // Start is called before the first frame update
-    public void SetProgress(int progress){
+    void Start()
+    {
+        _audioSource = GetComponent<AudioSource>();
+    }
+    
+    public void SetProgress(float progress){
+        IEnumerator ShowTwoStar(){
+            stars[0].SetActive(true);
+            _audioSource.PlayOneShot(StarSound);
+            yield return new WaitForSeconds(1);
+            stars[1].SetActive(true);
+            _audioSource.PlayOneShot(StarSound);
+        }
+
+        IEnumerator ShowThreeStar(){
+            stars[0].SetActive(true);
+            _audioSource.PlayOneShot(StarSound);
+            yield return new WaitForSeconds(1);
+            stars[1].SetActive(true);
+            _audioSource.PlayOneShot(StarSound);
+            yield return new WaitForSeconds(1);
+            stars[2].SetActive(true);
+            _audioSource.PlayOneShot(StarSound);
+        }
         slider.value = progress;
+        if(SceneRelatedGlobal.percentServed >= 30 && SceneRelatedGlobal.percentServed  <60){
+            
+            stars[0].SetActive(true);
+            _audioSource.PlayOneShot(StarSound);
+        }
+        else if(SceneRelatedGlobal.percentServed  >= 60 && SceneRelatedGlobal.percentServed  < 90){
+            StartCoroutine(ShowTwoStar());
+        }
+        else {
+            
+            StartCoroutine(ShowThreeStar());
+            
+        }
     }
 }
