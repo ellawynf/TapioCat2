@@ -2357,8 +2357,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 304aa4f97f1b34a5fb068bf03e1e5b26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  videoTexture: {fileID: 8400000, guid: a06357141612346ff9cd0a22190a7f5a, type: 2}
-  videoLength: 3
 --- !u!114 &829259508
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6241,7 +6239,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -34.64, y: -25}
+  m_AnchoredPosition: {x: -34.640625, y: -25}
   m_SizeDelta: {x: 50, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1830094829
@@ -7236,7 +7234,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400423569280188509, guid: f1c89b2f40a544d9fbff7e5bb05edde3, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 296.2
+      value: 243.2
       objectReference: {fileID: 0}
     - target: {fileID: 400423569280188509, guid: f1c89b2f40a544d9fbff7e5bb05edde3, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x

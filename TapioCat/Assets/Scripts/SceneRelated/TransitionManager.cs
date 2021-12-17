@@ -17,11 +17,11 @@ public class TransitionManager : MonoBehaviour
     public Image fadeImg;
 
     public RawImage videoImage;
-    
+    /*
     private VideoPlayer videoPlayer;
     public VideoClip[] videoClips;
     public VideoClip videoClip;
-    
+    */
 
 
     void Awake(){
@@ -31,7 +31,7 @@ public class TransitionManager : MonoBehaviour
         else{
             DontDestroyOnLoad(gameObject);
             audioSources = GetComponents<AudioSource>();
-            videoPlayer = GetComponent<VideoPlayer>();
+            //videoPlayer = GetComponent<VideoPlayer>();
             Debug.Log("Finished Coroutine at timestamp : ");
             
         }
