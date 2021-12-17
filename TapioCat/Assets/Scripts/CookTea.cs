@@ -13,6 +13,7 @@ public class CookTea : MonoBehaviour
     float cookTime;
     public int timeTilCooked = 6;
     public Animator animator;
+    public Animator blenderTimer;
     /*void Start() {
         cookTime = 0;    
     }*/
@@ -22,6 +23,7 @@ public class CookTea : MonoBehaviour
 
     void Start () {
 		animator = GetComponent<Animator>();
+        blenderTimer = GetComponent<Animator>();
         _audioSource = GetComponent<AudioSource>();
     }
     private void OnEnable() {
@@ -31,7 +33,7 @@ public class CookTea : MonoBehaviour
             child.gameObject.SetActive(true);
         }
         animator.SetBool("Blending", true);
-
+        blenderTimer.SetBool("Blending", true);
     }
     // Update is called once per frame
     void Update()
@@ -40,17 +42,14 @@ public class CookTea : MonoBehaviour
             print(cookTime);
             cookTime += Time.deltaTime;
 
-            if ((int) cookTime == (timeTilCooked / 3)){       // 1/3 of the way done, deactivating first block
-                Transform this_seg = timer.transform.GetChild(0);
-                this_seg.gameObject.SetActive(false);
-            } else if ((int) cookTime == (timeTilCooked / 1.5f)){     // 2/3 of the way done, deactivating second block
-                Transform this_seg = timer.transform.GetChild(1);
-                this_seg.gameObject.SetActive(false);                
-            } else if ((int) cookTime == timeTilCooked){
-                Transform this_seg = timer.transform.GetChild(2);       // 3/3 of the way done, deactivating 3rd block
-                this_seg.gameObject.SetActive(false);
-
+            //Because of the automatic animation, this_seg it no long needed
+            //Only needs to deactivate timer once cook is done.
+            if ((int) cookTime == timeTilCooked){
+                //Transform this_seg = timer.transform.GetChild(2);       // done, deactivating
+                //this_seg.gameObject.SetActive(false);
+                timer.SetActive(false);
                 animator.SetBool("Blending", false);
+                
                 // ding sound?
                 //if(GamePlay.blender != "full"){
                 _audioSource.PlayOneShot(dingSound);

@@ -22,7 +22,7 @@ public class CustomerOrder : MonoBehaviour
     //timer variables
     float timeWaited;
     public int leavingTime = 50;
-    public GameObject timer;
+    //public GameObject timer;
     //audio
     public AudioClip doorbell;
     public AudioClip coins;
@@ -31,17 +31,20 @@ public class CustomerOrder : MonoBehaviour
     public AudioClip leaveSound;
     AudioSource _audioSource;
     private GameObject player;
+    public SpriteRenderer spriteRenderer;
+    public Sprite[] spriteArray;
 
 
     // Start is called before the first frame update
     void Start()
     {
+
         //set up audio
         _audioSource = GetComponent<AudioSource>();
         player = GameObject.FindWithTag("Player");
 
         //setup timer
-        timer.SetActive(false);
+        //timer.SetActive(false);
 
         //set all cup variables to no
         //temp[0].SetActive(false);
@@ -106,12 +109,12 @@ public class CustomerOrder : MonoBehaviour
                 atCounter = false;
                 playAngry = false;
                 timeWaited = 0;
-                timer.SetActive(false);
+                /*timer.SetActive(false);
                 foreach (Transform child in timer.transform){
                     child.gameObject.SetActive(false);
                 }
                 print("delivered, CQ: ");
-                print(GamePlay.customerQueue);
+                print(GamePlay.customerQueue);*/
                 // yeah, also gotta set the sprites to destroy, we can figure that out later
                 //other resets go here too, probably something with the serving area
             }
@@ -139,18 +142,40 @@ public class CustomerOrder : MonoBehaviour
             }
         }
     }*/
-
-
+    void ChangeSprite1() 
+    { 
+        spriteRenderer.sprite = spriteArray[0]; 
+    }
+    void ChangeSprite2() 
+    { 
+        spriteRenderer.sprite = spriteArray[1]; 
+    }
+    void ChangeSprite3() 
+    { 
+        spriteRenderer.sprite = spriteArray[2]; 
+    }
+    void ChangeSprite4() 
+    { 
+        spriteRenderer.sprite = spriteArray[3]; 
+    }
+    void ChangeSprite5() 
+    { 
+        spriteRenderer.sprite = spriteArray[4]; 
+    }
+    void ChangeSprite6() 
+    { 
+        spriteRenderer.sprite = spriteArray[5]; 
+    }
     void Update(){
         //check if there's an "empty" space and if there's a customer in the queue
         //if yes then set to active
         if (atCounter == false && GamePlay.customerQueue > 0){
             GamePlay.customerQueue--;
             atCounter = true;
-            timer.SetActive(true);
-            foreach (Transform child in timer.transform){
+            //timer.SetActive(true);
+            /*foreach (Transform child in timer.transform){
                 child.gameObject.SetActive(true);
-            }
+            }*/
             customerSprite.SetActive(true);
             ice = (Random.Range(1,4)%2);
             tea = Random.Range(1,numTea);
@@ -168,23 +193,36 @@ public class CustomerOrder : MonoBehaviour
         if (atCounter == true){
             timeWaited += Time.deltaTime;
             print(timeWaited);
-            if ((int) timeWaited == (leavingTime / 3)){       // 1/3 of the way done, deactivating first block
-                Transform this_seg = timer.transform.GetChild(0);
-                this_seg.gameObject.SetActive(false);
-                print("1/3");
+            //timer.SetActive(true);
+            if ((int) timeWaited == (leavingTime / 6)){       // 1/6 of the way done
+                ChangeSprite1();
             }
-            if ((int) timeWaited == ((leavingTime*2) / 3)){     // 2/3 of the way done, deactivating second block
-                Transform this_seg = timer.transform.GetChild(1);
+            if ((int) timeWaited == (leavingTime / 3)){       // 1/3 of the way done
+                ChangeSprite2();
+                /*Transform this_seg = timer.transform.GetChild(0);
                 this_seg.gameObject.SetActive(false);
+                print("1/3");*/
+            }
+            if ((int) timeWaited == (leavingTime / 2)){       // 1/2 of the way done
+                ChangeSprite3();
+            }
+            if ((int) timeWaited == ((leavingTime*2) / 3)){     // 2/3 of the way done
+                ChangeSprite4();
+                /*Transform this_seg = timer.transform.GetChild(1);
+                this_seg.gameObject.SetActive(false);*/
                 if(playAngry == false){
                     playAngry = true;
                     _audioSource.PlayOneShot(angrySound);
                 }
                 print("2/3");             
             }
+            if ((int) timeWaited == (leavingTime / 1.2f)){       // 5/6 of the way done
+                ChangeSprite5();
+            }
             if ((int) timeWaited == leavingTime){
-                Transform this_seg = timer.transform.GetChild(2);       // 3/3 of the way done, deactivating 3rd block
-                this_seg.gameObject.SetActive(false);
+                ChangeSprite6();
+                /*Transform this_seg = timer.transform.GetChild(2);       // done, deactivating
+                this_seg.gameObject.SetActive(false);*/
                 _audioSource.PlayOneShot(leaveSound);
                 //copy and pasted from deliver, only difference is no additional points and no happy coin sound
                 atCounter = false;
@@ -194,7 +232,7 @@ public class CustomerOrder : MonoBehaviour
                 customerTypes[cust-1].SetActive(false);
                 drinkOrdered = "None";
                 customerSprite.SetActive(false);
-                timer.SetActive(false);
+                //timer.SetActive(false);
                 atCounter = false;
                 playAngry = false;
                 timeWaited = 0;

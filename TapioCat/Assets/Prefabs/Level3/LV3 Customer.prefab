@@ -124,11 +124,18 @@ MonoBehaviour:
   drinkOrdered: 
   atCounter: 0
   leavingTime: 50
-  timer: {fileID: 0}
   doorbell: {fileID: 8300000, guid: 86eb8609ee3c36640854d2a91b84342f, type: 3}
   coins: {fileID: 8300000, guid: d4b55afd23dec8f47a268498aa68efe5, type: 3}
   angrySound: {fileID: 8300000, guid: a8cf677001e9dd64bb05be959012b105, type: 3}
   leaveSound: {fileID: 8300000, guid: 7160ae3479a939846995bde434200fa2, type: 3}
+  spriteRenderer: {fileID: 7717136954871101881, guid: 3e983704f70eb496b89ec4be9d506e5a, type: 3}
+  spriteArray:
+  - {fileID: 361701091, guid: 26aaced0b36784b1ab270c02e5099cf1, type: 3}
+  - {fileID: -1992751326, guid: 26aaced0b36784b1ab270c02e5099cf1, type: 3}
+  - {fileID: -178158140, guid: 26aaced0b36784b1ab270c02e5099cf1, type: 3}
+  - {fileID: 1482853283, guid: 26aaced0b36784b1ab270c02e5099cf1, type: 3}
+  - {fileID: -7969342, guid: 26aaced0b36784b1ab270c02e5099cf1, type: 3}
+  - {fileID: -1244676818, guid: 26aaced0b36784b1ab270c02e5099cf1, type: 3}
 --- !u!61 &4889249717004049325
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -476,7 +483,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6354337569107961182, guid: 5dbfe22531e4f0a44906cababc762ae6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.84
+      value: 0.99
       objectReference: {fileID: 0}
     - target: {fileID: 6354337569107961182, guid: 5dbfe22531e4f0a44906cababc762ae6, type: 3}
       propertyPath: m_LocalPosition.y
