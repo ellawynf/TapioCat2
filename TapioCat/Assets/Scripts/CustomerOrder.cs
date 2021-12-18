@@ -236,7 +236,9 @@ public class CustomerOrder : MonoBehaviour
                 customerTypes[cust-1].SetActive(false);
                 drinkOrdered = "None";
                 customerSprite.SetActive(false);
-                //timer.SetActive(false);
+                timerAnim.SetInteger("Time", 0);
+                timerAnim.SetBool("Waiting", false);
+                timer.SetActive(false);
                 atCounter = false;
                 playAngry = false;
                 timeWaited = 0;
